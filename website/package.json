@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://JorisvdSluis.github.io/website/JorisvdSluis",
+  "homepage":"https://JorisvdSluis.github.io",
   "dependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
