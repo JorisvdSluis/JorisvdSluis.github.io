@@ -35,11 +35,13 @@ class App extends Component {
           once={false}
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}>
-         
+          
           <Menu
             fixed={fixed ? 'top' : 'top'}
-            inverted={fixed ? fixed : !fixed}
-            secondary={!fixed}
+           inverted={fixed ? !fixed : !fixed}
+           secondary={fixed ? !fixed: !fixed}
+          borderless
+       
             size='huge'>
             <Container >
               <Menu.Item position='right'>
