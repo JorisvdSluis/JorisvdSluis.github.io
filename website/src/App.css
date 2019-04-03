@@ -1,0 +1,9 @@
+.HeaderBackground{
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+    align-content: center
+}
+.Image{
+    align-self: center;
+    width: 100%;
+}
