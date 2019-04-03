@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from './assets/bg3.jpg'
+import banner from './assets/banner4k.png'
 import './App.css'
 import {
     Image, Container,

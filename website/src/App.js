@@ -5,6 +5,7 @@ import {
   Container,
   Menu,
   Visibility,
+  Divider,
 } from 'semantic-ui-react'
 import Footer from './Footer';
 import Skills from './Skills';
