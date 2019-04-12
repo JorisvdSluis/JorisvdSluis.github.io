@@ -12,6 +12,7 @@ import Skills from './Skills';
 import About from './About';
 import Experience from './Experience';
 import Head from './Head';
+import Projects from './Projects';
 
 
 class App extends Component {
@@ -57,6 +58,7 @@ class App extends Component {
         </Visibility>
         <About ref={(section) => { this.aboutRef = section; }} />
         <Experience ref={(section) => { this.experienceRef = section; }} />
+        <Projects/>
         <Skills ref={(section) => { this.skillsRef = section; }} />
         <Footer />
       </>

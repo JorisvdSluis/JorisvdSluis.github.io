@@ -21,11 +21,6 @@ class Skills extends React.Component {
       <Segment style={{ padding: '5em 0em' }} vertical>
         <Grid columns={2} textAlign='center'>
           <GridRow>
-            {/* <GridColumn>
-                <Header as='h3' style={{ fontSize: '2em' }}>
-                  Projects
-            </Header>
-              </GridColumn> */}
             <GridColumn>
               <Header as='h3' style={{ fontSize: '2em' }}>
               <br/>
@@ -37,20 +32,6 @@ class Skills extends React.Component {
         </Grid>
         <Grid columns={2} textAlign='center'>
           <Grid.Row verticalAlign='middle'>
-            {/* <Grid.Column> 
-            <Grid columns={2} textAlign='center'>
-              <GridRow>
-                <section className='skills' ref={(section) => { this.Skills = section; }}></section>
-                <GridColumn><LangCard image={rug} title="Webshop" subtitle="Created with ReactJs and GraphQl" ></LangCard></GridColumn>
-                <GridColumn><LangCard image={rug} title="Guitar hero" subtitle="Created with Pygame" ></LangCard></GridColumn>
-              </GridRow>
-              
-              <GridRow>
-                <GridColumn><LangCard image={rug} title="Lucky Lama" subtitle="Created with Flutter(Dart)" ></LangCard></GridColumn>
-                <GridColumn><LangCard image={rug} title="Face recogniton" subtitle="" ></LangCard></GridColumn>
-              </GridRow>
-            </Grid>
-          </Grid.Column> */}
             <Grid.Column>
               <Grid columns={2} textAlign='center'>
                 <GridRow>
