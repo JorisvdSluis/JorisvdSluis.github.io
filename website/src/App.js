@@ -21,6 +21,7 @@ class App extends Component {
     this.aboutRef = React.createRef();
     this.experienceRef = React.createRef();
     this.skillsRef = React.createRef();
+    this.projectsRef = React.createRef();
   }
 
   state = {}
@@ -51,6 +52,7 @@ class App extends Component {
                 </Menu.Item>
                 <Menu.Item as='a' onClick={() => scrollToComponent(this.aboutRef)} >About</Menu.Item>
                 <Menu.Item as='a' onClick={() => scrollToComponent(this.experienceRef)}>Experience</Menu.Item>
+                <Menu.Item as='a' onClick={() => scrollToComponent(this.projectsRef)}>Projects</Menu.Item>
                 <Menu.Item as='a' onClick={() => scrollToComponent(this.skillsRef)}>Skills</Menu.Item>
               </Menu.Item>
             </Container>
@@ -58,7 +60,7 @@ class App extends Component {
         </Visibility>
         <About ref={(section) => { this.aboutRef = section; }} />
         <Experience ref={(section) => { this.experienceRef = section; }} />
-        <Projects/>
+        <Projects ref={(section) => { this.projectsRef = section; }} />
         <Skills ref={(section) => { this.skillsRef = section; }} />
         <Footer />
       </>

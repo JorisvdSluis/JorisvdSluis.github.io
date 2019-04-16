@@ -18,7 +18,7 @@ class Skills extends React.Component {
 
   render() {
     return (
-      <Segment style={{ padding: '5em 0em' }} vertical>
+      <Segment style={{ padding: '20em 0em' }} vertical>
         <Grid columns={2} textAlign='center'>
           <GridRow>
             <GridColumn>
