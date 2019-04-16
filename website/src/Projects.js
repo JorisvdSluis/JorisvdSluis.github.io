@@ -1,11 +1,8 @@
 import React from 'react'
 import {
     Grid,
-    Header,
     Segment,
-    Button,
     Image,
-    label
 } from 'semantic-ui-react'
 import webshop from './assets/webshop.jpg'
 import WebshopText from "./WebshopText"
@@ -18,52 +15,52 @@ import FaceImage from "./assets/face.jpg"
 class Projects extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {Webshop: true,
-            App:false,
-            Game:false,
-            Face:false};
-        this.handleWebshop= this.handleWebshop.bind(this);
-        this.handleApp= this.handleApp.bind(this);
-        this.handleGame= this.handleGame.bind(this);
-        this.handleFace= this.handleFace.bind(this);
-      }
-     
-      handleWebshop() {
+        this.state = {
+            Webshop: true,
+            App: false,
+            Game: false,
+            Face: false
+        };
+        this.handleWebshop = this.handleWebshop.bind(this);
+        this.handleApp = this.handleApp.bind(this);
+        this.handleGame = this.handleGame.bind(this);
+        this.handleFace = this.handleFace.bind(this);
+    }
+
+    handleWebshop() {
         this.setState({
             App: false,
             Webshop: true,
             Game: false,
             Face: false
         });
-      }
-    
-      handleApp() {
+    }
+
+    handleApp() {
         this.setState({
-         App: true,
-         Webshop: false,
-         Game: false,
-         Face: false
+            App: true,
+            Webshop: false,
+            Game: false,
+            Face: false
         });
-      }
-      handleGame() {
+    }
+    handleGame() {
         this.setState({
-         App: false,
-         Webshop: false,
-         Game: true,
-         Face: false
+            App: false,
+            Webshop: false,
+            Game: true,
+            Face: false
         });
-      }
-      handleFace() {
+    }
+    handleFace() {
         this.setState({
-         App: false,
-         Webshop: false,
-         Game: false,
-         Face: true
+            App: false,
+            Webshop: false,
+            Game: false,
+            Face: true
         });
-      }
-    
-        
-    
+    }
+
     render() {
         return (
             <Segment style={{ padding: '20.0em 0em' }} vertical >
@@ -72,24 +69,20 @@ class Projects extends React.Component {
                         <Grid.Column floated='right' width={10}>
                             <Grid columns={2}>
                                 <Grid.Column>
-                                    <Image bordered rounded size='large' src={webshop}  onClick={this.handleWebshop} /></Grid.Column>
+                                    <Image style={{ cursor: 'pointer' }} bordered rounded size='large' src={webshop} onClick={this.handleWebshop} /></Grid.Column>
                                 <Grid.Column>
-                                    <Image bordered rounded size='large' src={AppImage} onClick={this.handleApp}/></Grid.Column>
+                                    <Image style={{ cursor: 'pointer' }} bordered rounded size='large' src={AppImage} onClick={this.handleApp} /></Grid.Column>
                                 <Grid.Column>
-                                    <Image bordered rounded size='large' src={FaceImage} onClick={this.handleFace}/></Grid.Column>
+                                    <Image style={{ cursor: 'pointer' }} bordered rounded size='large' src={FaceImage} onClick={this.handleFace} /></Grid.Column>
                                 <Grid.Column>
-                                    <Image bordered rounded size='large' src={GameImage} onClick={this.handleGame}/></Grid.Column>
-
-
+                                    <Image style={{ cursor: 'pointer' }} bordered rounded size='large' src={GameImage} onClick={this.handleGame} /></Grid.Column>
                             </Grid>
-
-
                         </Grid.Column>
                         <Grid.Column width={6}>
-                        { this.state.App && <AppText/>}
-                        { this.state.Face && <FaceText/>}
-                        { this.state.Game && <GameText/>}
-                            { this.state.Webshop && <WebshopText/>}
+                            {this.state.App && <AppText />}
+                            {this.state.Face && <FaceText />}
+                            {this.state.Game && <GameText />}
+                            {this.state.Webshop && <WebshopText />}
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
