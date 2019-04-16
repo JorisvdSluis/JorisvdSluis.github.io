@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/face.61855e10.jpg"
   },
   {
-    "revision": "c8824ffb5c161446dfb3",
+    "revision": "72595f8730f33ecc831d",
     "url": "/static/css/main.4afea9dc.chunk.css"
   },
   {
@@ -76,20 +76,20 @@ self.__precacheManifest = [
     "url": "/static/media/Game.28fe84d2.png"
   },
   {
-    "revision": "c8824ffb5c161446dfb3",
-    "url": "/static/js/main.16ed962c.chunk.js"
+    "revision": "72595f8730f33ecc831d",
+    "url": "/static/js/main.69adea7b.chunk.js"
   },
   {
     "revision": "3f83d4120b46b1720ea0d7c66f5dea91",
     "url": "/static/media/banner4kmobile.3f83d412.png"
   },
   {
-    "revision": "cd6c777f1945164224dee082abaea03a",
-    "url": "/static/media/outline-icons.cd6c777f.woff2"
-  },
-  {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "/static/media/outline-icons.ef60a4f6.woff"
+  },
+  {
+    "revision": "cd6c777f1945164224dee082abaea03a",
+    "url": "/static/media/outline-icons.cd6c777f.woff2"
   },
   {
     "revision": "9c74e172f87984c48ddf5c8108cabe67",
@@ -124,12 +124,12 @@ self.__precacheManifest = [
     "url": "/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
-    "url": "/static/media/icons.b87b9ba5.ttf"
-  },
-  {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/static/media/icons.b87b9ba5.ttf"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
@@ -148,7 +148,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.aac876fa.chunk.css"
   },
   {
-    "revision": "b688f51a8bcb2be0b1f2a396c9adf7f7",
+    "revision": "bac51fdc9a3ec9244bc06ba096ad8973",
     "url": "/index.html"
   }
 ];
