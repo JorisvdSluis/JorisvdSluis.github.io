@@ -1,11 +1,11 @@
 import React from 'react'
-import banner from './assets/banner4k.png'
+import banner from './assets/banner4kmobile.png'
 import './App.css'
 import {
     Image, 
   
 } from 'semantic-ui-react'
-class Head extends React.Component {
+class HeadMobile extends React.Component {
     render() {
         return (
             <>
@@ -15,4 +15,4 @@ class Head extends React.Component {
     }
 }
 
-export default Head
+export default HeadMobile
