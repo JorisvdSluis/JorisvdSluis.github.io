@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/face.61855e10.jpg"
   },
   {
-    "revision": "72595f8730f33ecc831d",
-    "url": "/static/css/main.4afea9dc.chunk.css"
+    "revision": "197a6138235b1e53c59c",
+    "url": "/static/css/main.7e63836a.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "a15b79215242ee19ec82",
-    "url": "/static/js/2.d82760ee.chunk.js"
+    "revision": "472b29c9e7836531f045",
+    "url": "/static/js/2.277ca823.chunk.js"
   },
   {
     "revision": "8a50b602aa79b19775c22d02a290f51f",
@@ -76,20 +76,20 @@ self.__precacheManifest = [
     "url": "/static/media/Game.28fe84d2.png"
   },
   {
-    "revision": "72595f8730f33ecc831d",
-    "url": "/static/js/main.69adea7b.chunk.js"
+    "revision": "197a6138235b1e53c59c",
+    "url": "/static/js/main.89717fcd.chunk.js"
   },
   {
     "revision": "3f83d4120b46b1720ea0d7c66f5dea91",
     "url": "/static/media/banner4kmobile.3f83d412.png"
   },
   {
-    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
-    "url": "/static/media/outline-icons.ef60a4f6.woff"
-  },
-  {
     "revision": "cd6c777f1945164224dee082abaea03a",
     "url": "/static/media/outline-icons.cd6c777f.woff2"
+  },
+  {
+    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
+    "url": "/static/media/outline-icons.ef60a4f6.woff"
   },
   {
     "revision": "9c74e172f87984c48ddf5c8108cabe67",
@@ -124,12 +124,12 @@ self.__precacheManifest = [
     "url": "/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "13db00b7a34fee4d819ab7f9838cc428",
-    "url": "/static/media/brand-icons.13db00b7.eot"
-  },
-  {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
     "url": "/static/media/icons.b87b9ba5.ttf"
+  },
+  {
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/static/media/brand-icons.13db00b7.eot"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
@@ -144,11 +144,11 @@ self.__precacheManifest = [
     "url": "/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "a15b79215242ee19ec82",
-    "url": "/static/css/2.aac876fa.chunk.css"
+    "revision": "472b29c9e7836531f045",
+    "url": "/static/css/2.819e9f8b.chunk.css"
   },
   {
-    "revision": "bac51fdc9a3ec9244bc06ba096ad8973",
+    "revision": "3ac859ced7bb189d0e00069351ec5d5b",
     "url": "/index.html"
   }
 ];
