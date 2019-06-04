@@ -6,8 +6,8 @@ import {
     Image,
     Segment,
   } from 'semantic-ui-react'
-  import pdf from './assets/cvs.pdf';
-  import rug from './assets/rug.jpg';
+  import pdf from '../assets/cvs.pdf';
+  import rug from '../assets/rug.jpg';
 class About extends React.Component  {
   
     render(){

@@ -7,3 +7,33 @@
     align-self: center;
     width: 100%;
 }
+@keyframes Arrow2{
+    from {margin-top: 0vmax;}
+    to{margin-top: 3vmax;}
+}
+@keyframes Arrow{
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        transform: translateY(30px);
+    }
+    40% {
+        transform: translateY(42px);
+    }
+    60% {
+        transform: translateY(50px);
+}
+}
+
+#Arrow{
+   margin-left: 50vmax;
+   color:  dimgray;
+   z-index: 2;
+   cursor: pointer;
+   position: absolute;
+   animation-name: Arrow;
+   animation-duration: 2s;
+   animation-iteration-count: infinite
+}

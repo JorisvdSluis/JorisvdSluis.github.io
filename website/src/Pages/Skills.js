@@ -6,13 +6,13 @@ import {
   GridRow,
   GridColumn,
 } from 'semantic-ui-react'
-import flutter from './assets/flutter.png'
-import c from './assets/c.png'
-import javascript from "./assets/javascript.png"
-import typescript from './assets/typescript.png'
-import html from './assets/html.png'
-import python from './assets/python.png'
-import LangCard from './Card.js'
+import flutter from '../assets/flutter.png'
+import c from '../assets/c.png'
+import javascript from "../assets/javascript.png"
+import typescript from '../assets/typescript.png'
+import html from '../assets/html.png'
+import python from '../assets/python.png'
+import LangCard from '../UI/Card.js'
 
 class Skills extends React.Component {
 

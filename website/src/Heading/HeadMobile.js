@@ -1,6 +1,6 @@
 import React from 'react'
-import banner from './assets/banner4kmobile.png'
-import './App.css'
+import banner from '../assets/banner4kmobile.png'
+import '../App.css'
 import {
     Image, 
   

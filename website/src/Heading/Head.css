@@ -1,0 +1,21 @@
+#LinkedIn{
+   margin-left: 90vmax;
+   color:  lime;
+   height: 30px;
+   z-index: 2;
+   margin-top: 35vmax;
+   position: absolute;
+}
+#Github{
+    margin-left: 92.5vmax;
+    color:  lime;
+    height: 30px;
+    z-index: 2;
+    margin-top: 35vmax;
+    position: absolute;
+ }
+
+#head{
+    z-index: 1;
+    position: relative;
+}

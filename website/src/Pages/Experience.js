@@ -1,5 +1,5 @@
-import work from './assets/dirk.jpg'
-import education from './assets/coding.jpg'
+import work from '../assets/dirk.jpg'
+import education from '../assets/coding.jpg'
 import React from 'react'
 import {
   Divider,

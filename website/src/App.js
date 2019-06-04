@@ -9,14 +9,14 @@ import {
   Segment,
 
 } from 'semantic-ui-react'
-import Footer from './Footer';
-import Skills from './Skills';
-import About from './About';
-import Experience from './Experience';
-import Head from './Head';
-import Projects from './Projects';
-import HeadMobile from './HeadMobile';
-
+import Footer from './Pages/Footer';
+import Skills from './Pages/Skills';
+import About from './Heading/About';
+import Experience from './Pages/Experience';
+import Head from './Heading/Head';
+import Projects from './Pages/Projects';
+import HeadMobile from './Heading/HeadMobile';
+import { FaArrowDown} from 'react-icons/fa';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -105,6 +105,7 @@ class App extends Component {
     else {
       return (
         <> <Head />
+        <FaArrowDown id = 'Arrow' size = '2.5em' as='a' onClick={() => scrollToComponent(this.aboutRef)}/>
           <Visibility
             once={false}
             onBottomPassed={this.showFixedMenu}
