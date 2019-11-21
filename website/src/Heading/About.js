@@ -13,7 +13,7 @@ class About extends React.Component  {
     render(){
         return(
             
-<Segment style={{ padding: '20.0em 0em' }} vertical>
+<Segment style={{ padding: this.props.padding }} vertical>
           <Grid   container stackable verticalAlign='middle'>
             <Grid.Row>
               <Grid.Column width={8}>

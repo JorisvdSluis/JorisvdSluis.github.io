@@ -113,7 +113,7 @@ class App extends Component {
               <Segment
                 inverted
                 textAlign="center"
-                style={{ minHeight: 150, padding: "0em 0em"}}
+                style={{ minHeight: 0, padding: "0em 0em"}}
                 vertical
               >
                 {/* <Container style={{ minHeight: 40, padding: "0em 0em" }} /> */}
@@ -121,27 +121,31 @@ class App extends Component {
               </Segment>
 
               <About
+              padding='5em 0em'
                 ref={section => {
                   this.aboutRef = section;
                 }}
               />
               <Experience
+              padding='5em 0em'
                 ref={section => {
                   this.experienceRef = section;
                 }}
               />
               <Projects
+              padding='5em 0em'
                 ref={section => {
                   this.projectsRef = section;
                 }}
               />
               <Skills
+              padding='5em 0em'
               columns={1}
                 ref={section => {
                   this.skillsRef = section;
                 }}
               />
-              <Footer />
+              <Footer padding='5em 0em'/>
             </Sidebar.Pusher>
           </Visibility>
         </>
@@ -203,27 +207,32 @@ class App extends Component {
             </Menu>
           </Visibility>
           <About
+          padding='20em 0em'
             ref={section => {
               this.aboutRef = section;
             }}
           />
           <Experience
+           padding='20em 0em'
             ref={section => {
               this.experienceRef = section;
             }}
           />
           <Projects
+           padding='20em 0em'
+           display="none"
             ref={section => {
               this.projectsRef = section;
             }}
           />
           <Skills
+           padding='20em 0em'
            columns={2}
             ref={section => {
               this.skillsRef = section;
             }}
           />
-          <Footer />
+          <Footer padding='20em 0em' />
         </>
       );
     }

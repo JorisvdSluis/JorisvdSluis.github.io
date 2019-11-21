@@ -14,7 +14,7 @@ import {
 class Experience extends React.Component  {
     render(){
         return(
-            <Segment style={{ padding: '20em 0em' }} vertical>
+            <Segment style={{ padding: this.props.padding  }} vertical>
             <Grid container stackable verticalAlign='middle'>
               <Grid.Row >
                 <Grid.Column floated='left' width={5}>

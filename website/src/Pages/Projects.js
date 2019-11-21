@@ -3,6 +3,7 @@ import {
     Grid,
     Segment,
     Image,
+    Header
 } from 'semantic-ui-react'
 import webshop from '../assets/webshop.jpg'
 import WebshopText from "../Text/WebshopText"
@@ -84,10 +85,13 @@ class Projects extends React.Component {
 
     render() {
         return (
-            <Segment style={{ padding: '20.0em 0em' }} vertical >
+            <Segment style={{padding: this.props.padding  }} vertical >
                 <Grid container stackable verticalAlign='middle'>
                     <Grid.Row>
                         <Grid.Column floated='right' width={10}>
+                        <Header as='h3' style={{ fontSize: '2em', display: this.props.display }}>
+                    Projects
+              </Header>
                             <Grid columns={2}>
                                 <Grid.Column>
                                     <Image id={this.state.WebshopId} style={{ cursor: 'pointer' }} bordered rounded size='large' src={webshop} onClick={this.handleWebshop} /></Grid.Column>
