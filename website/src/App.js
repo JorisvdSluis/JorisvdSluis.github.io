@@ -232,7 +232,7 @@ class App extends Component {
               this.skillsRef = section;
             }}
           />
-          <Footer padding='20em 0em' />
+          <Footer padding='5em 0em' />
         </>
       );
     }
