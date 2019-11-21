@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/webshop.452904d5.jpg"
   },
   {
-    "revision": "518543191a62653b5cf2",
+    "revision": "19ba3d095b9a68f84d86",
     "url": "/static/css/main.2113c41d.chunk.css"
   },
   {
@@ -88,8 +88,8 @@ self.__precacheManifest = [
     "url": "/static/media/banner4k.ef33a62c.png"
   },
   {
-    "revision": "518543191a62653b5cf2",
-    "url": "/static/js/main.344b9aa6.chunk.js"
+    "revision": "19ba3d095b9a68f84d86",
+    "url": "/static/js/main.4c5906af.chunk.js"
   },
   {
     "revision": "b5c309918e9af00c5cd31410d8e34cb3",
@@ -120,24 +120,24 @@ self.__precacheManifest = [
     "url": "/static/media/flags.9c74e172.png"
   },
   {
-    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
-    "url": "/static/media/outline-icons.ad97afd3.ttf"
-  },
-  {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
     "url": "/static/media/outline-icons.701ae6ab.eot"
+  },
+  {
+    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
+    "url": "/static/media/outline-icons.ad97afd3.ttf"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
     "url": "/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "faff92145777a3cbaf8e7367b4807987",
-    "url": "/static/media/icons.faff9214.woff"
-  },
-  {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
     "url": "/static/media/brand-icons.e8c322de.woff2"
+  },
+  {
+    "revision": "faff92145777a3cbaf8e7367b4807987",
+    "url": "/static/media/icons.faff9214.woff"
   },
   {
     "revision": "a046592bac8f2fd96e994733faf3858c",
@@ -172,7 +172,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.819e9f8b.chunk.css"
   },
   {
-    "revision": "73bc3f4e3ee4616a62727074b8164d6b",
+    "revision": "80bf8400238f18d97fa28efe766c43ae",
     "url": "/index.html"
   }
 ];
