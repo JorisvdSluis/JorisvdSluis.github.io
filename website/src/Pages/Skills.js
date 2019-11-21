@@ -36,7 +36,7 @@ class Skills extends React.Component {
             </GridColumn>
           </GridRow>
         </Grid>
-        <Grid columns={2} textAlign='center'>
+        <Grid columns={this.props.columns} textAlign='center'>
           <Grid.Row verticalAlign='middle'>
             <Grid.Column>
               <Grid columns={4} textAlign='center'>

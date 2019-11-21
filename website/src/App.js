@@ -58,13 +58,14 @@ class App extends Component {
     const{activeButton} = this.state;
     if (isMobile) {
       return (
-        <>
+        < >
           <Visibility
+          style={{ overflowY: 'hidden', overflowX: 'hidden'}}
             once={false}
             onBottomPassed={this.showFixedMenu}
             onBottomPassedReverse={this.hideFixedMenu}
           >
-            <Menu
+            {/* <Menu
               as={Menu}
               animation="push"
               inverted
@@ -107,16 +108,16 @@ class App extends Component {
               >
                 Skills
               </Menu.Item>
-            </Menu>
+            </Menu> */}
             <Sidebar.Pusher dimmed={sidebarOpened}>
               <Segment
                 inverted
                 textAlign="center"
-                style={{ minHeight: 150, padding: "0em 0em" }}
+                style={{ minHeight: 150, padding: "0em 0em"}}
                 vertical
               >
-                <Container style={{ minHeight: 40, padding: "0em 0em" }} />
-                <HeadMobile />
+                {/* <Container style={{ minHeight: 40, padding: "0em 0em" }} /> */}
+                <HeadMobile/>
               </Segment>
 
               <About
@@ -135,6 +136,7 @@ class App extends Component {
                 }}
               />
               <Skills
+              columns={1}
                 ref={section => {
                   this.skillsRef = section;
                 }}
@@ -216,6 +218,7 @@ class App extends Component {
             }}
           />
           <Skills
+           columns={2}
             ref={section => {
               this.skillsRef = section;
             }}
