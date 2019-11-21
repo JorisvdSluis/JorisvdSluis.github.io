@@ -16,11 +16,36 @@ class Experience extends React.Component  {
         return(
             <Segment style={{ padding: '20em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
-              <Grid.Row>
+              <Grid.Row >
                 <Grid.Column floated='left' width={5}>
+                  <Segment basic>
+                    <Header as='h3' style={{ fontSize: '2em' }}>
+                      Work Experience
+              </Header>
+                    <p style={{ fontSize: '1.33em' }}>
+                      <Label ribbon>2014 - now</Label><br />
+                      <b>Team Leader</b> <br />
+                      Dirk van den Broek
+              </p>
+              <p style={{ fontSize: '1.33em' }}>
+                      <Label ribbon>2019 - 2020</Label><br />
+                      <b>Internship</b> <br />
+                      LVPReserveringen<br></br>
+                     <a href="http://www.lvpres.nl/">Website</a> 
+              </p>
+                  </Segment>
+                  
+                </Grid.Column>
+                <Grid.Column floated='right'width={7}>
+                  <Image bordered rounded size='large' src={work} />
+                </Grid.Column>   
+              </Grid.Row>
+              <Divider/>
+              <Grid.Row>
+                <Grid.Column floated='left' width={8}>
                   <Image bordered rounded size='large' src={education} />
                 </Grid.Column>
-                <Grid.Column width={8}>
+                <Grid.Column floated='right' width={5}>
                   <Segment basic>
                     <Header as='h3' style={{ fontSize: '2em' }}>
                       Education
@@ -35,24 +60,6 @@ class Experience extends React.Component  {
                       DevelsteinCollege
               </p>
                   </Segment>
-                </Grid.Column>
-              </Grid.Row>
-              <Divider />
-              <Grid.Row>
-                <Grid.Column width={8}>
-                  <Segment basic>
-                    <Header as='h3' style={{ fontSize: '2em' }}>
-                      Work Experience
-              </Header>
-                    <p style={{ fontSize: '1.33em' }}>
-                      <Label ribbon>2014 - now</Label><br />
-                      <b>Team Leader</b> <br />
-                      Dirk van den Broek
-              </p>
-                  </Segment>
-                </Grid.Column>
-                <Grid.Column floated='right' width={5}>
-                  <Image bordered rounded size='large' src={work} />
                 </Grid.Column>
               </Grid.Row>
             </Grid>
