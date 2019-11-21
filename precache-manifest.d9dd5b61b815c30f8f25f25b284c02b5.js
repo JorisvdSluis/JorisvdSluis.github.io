@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/webshop.452904d5.jpg"
   },
   {
-    "revision": "f02cae2d6d7896945634",
+    "revision": "58d4a594c778676498eb",
     "url": "/static/css/main.2113c41d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "e979c7769e4ec8c0ff89",
-    "url": "/static/js/2.97e99a38.chunk.js"
+    "revision": "baebf894fba815ae285d",
+    "url": "/static/js/2.5e2221b3.chunk.js"
   },
   {
     "revision": "8a50b602aa79b19775c22d02a290f51f",
@@ -88,8 +88,8 @@ self.__precacheManifest = [
     "url": "/static/media/banner4k.ef33a62c.png"
   },
   {
-    "revision": "f02cae2d6d7896945634",
-    "url": "/static/js/main.b95c6052.chunk.js"
+    "revision": "58d4a594c778676498eb",
+    "url": "/static/js/main.cc1aeaea.chunk.js"
   },
   {
     "revision": "b5c309918e9af00c5cd31410d8e34cb3",
@@ -120,12 +120,12 @@ self.__precacheManifest = [
     "url": "/static/media/flags.9c74e172.png"
   },
   {
-    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
-    "url": "/static/media/outline-icons.ad97afd3.ttf"
-  },
-  {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
     "url": "/static/media/outline-icons.701ae6ab.eot"
+  },
+  {
+    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
+    "url": "/static/media/outline-icons.ad97afd3.ttf"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
@@ -144,16 +144,16 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a046592b.woff"
   },
   {
-    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
-    "url": "/static/media/icons.b87b9ba5.ttf"
-  },
-  {
     "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
     "url": "/static/media/icons.8e3c7f55.eot"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/static/media/icons.b87b9ba5.ttf"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
@@ -168,11 +168,11 @@ self.__precacheManifest = [
     "url": "/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "e979c7769e4ec8c0ff89",
+    "revision": "baebf894fba815ae285d",
     "url": "/static/css/2.819e9f8b.chunk.css"
   },
   {
-    "revision": "24b9075fcb66f8fe9ad277e810392731",
+    "revision": "bd00a242bef104b98e46bdf52782c2d0",
     "url": "/index.html"
   }
 ];
