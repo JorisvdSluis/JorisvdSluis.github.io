@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "452904d536ceb813811bebdb4cd2f717",
-    "url": "/static/media/webshop.452904d5.jpg"
+    "revision": "28fe84d25224d8c1eae0065b5269f0b7",
+    "url": "/static/media/Game.28fe84d2.png"
   },
   {
-    "revision": "19ba3d095b9a68f84d86",
-    "url": "/static/css/main.2113c41d.chunk.css"
+    "revision": "96d3fe39a8db3ca3689f",
+    "url": "/static/css/main.d85b3509.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "baebf894fba815ae285d",
-    "url": "/static/js/2.5e2221b3.chunk.js"
+    "revision": "61798b6390ecac3a4de9",
+    "url": "/static/js/2.74dbbf76.chunk.js"
   },
   {
     "revision": "8a50b602aa79b19775c22d02a290f51f",
@@ -76,36 +76,44 @@ self.__precacheManifest = [
     "url": "/static/media/rug.9d52b607.jpg"
   },
   {
-    "revision": "5a924e36e0ec459d4b9096284649be7f",
-    "url": "/static/media/dirk.5a924e36.jpg"
-  },
-  {
-    "revision": "ddb56276ce6a792b4e61d959cb330dc0",
-    "url": "/static/media/coding.ddb56276.jpg"
+    "revision": "6cd04d3e0e3a9699d3d1673233baff4d",
+    "url": "/static/media/lvp.6cd04d3e.jpg"
   },
   {
     "revision": "ef33a62c4d6278faf0432de9e4d746c6",
     "url": "/static/media/banner4k.ef33a62c.png"
   },
   {
-    "revision": "19ba3d095b9a68f84d86",
-    "url": "/static/js/main.4c5906af.chunk.js"
+    "revision": "452904d536ceb813811bebdb4cd2f717",
+    "url": "/static/media/webshop.452904d5.jpg"
   },
   {
     "revision": "b5c309918e9af00c5cd31410d8e34cb3",
     "url": "/static/media/App.b5c30991.png"
   },
   {
-    "revision": "28fe84d25224d8c1eae0065b5269f0b7",
-    "url": "/static/media/Game.28fe84d2.png"
+    "revision": "96d3fe39a8db3ca3689f",
+    "url": "/static/js/main.ae0df1ce.chunk.js"
   },
   {
     "revision": "61855e1091909d3dd8e8140d708668b2",
     "url": "/static/media/face.61855e10.jpg"
   },
   {
+    "revision": "8418f2e69b8eb2a2be284013e50db781",
+    "url": "/static/media/cevede.8418f2e6.png"
+  },
+  {
+    "revision": "8103530a1c43b7aa594c3295e3006d2f",
+    "url": "/static/media/seatplan.8103530a.jpg"
+  },
+  {
     "revision": "3f83d4120b46b1720ea0d7c66f5dea91",
     "url": "/static/media/banner4kmobile.3f83d412.png"
+  },
+  {
+    "revision": "ddb56276ce6a792b4e61d959cb330dc0",
+    "url": "/static/media/coding.ddb56276.jpg"
   },
   {
     "revision": "cd6c777f1945164224dee082abaea03a",
@@ -144,12 +152,12 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a046592b.woff"
   },
   {
-    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
-    "url": "/static/media/icons.8e3c7f55.eot"
-  },
-  {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
     "url": "/static/media/icons.b87b9ba5.ttf"
+  },
+  {
+    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
+    "url": "/static/media/icons.8e3c7f55.eot"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -168,11 +176,11 @@ self.__precacheManifest = [
     "url": "/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "baebf894fba815ae285d",
-    "url": "/static/css/2.819e9f8b.chunk.css"
+    "revision": "61798b6390ecac3a4de9",
+    "url": "/static/css/2.edc383cd.chunk.css"
   },
   {
-    "revision": "80bf8400238f18d97fa28efe766c43ae",
+    "revision": "f33f5bde1354e9a2bfdfbfb5a3bb799f",
     "url": "/index.html"
   }
 ];
