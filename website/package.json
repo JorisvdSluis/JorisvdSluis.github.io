@@ -6,6 +6,7 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.5",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.8.5",
     "react-icons": "^3.7.0",
     "react-responsive-image": "^5.0.0",
@@ -14,6 +15,7 @@
     "react-scroll": "^1.7.11",
     "react-scroll-to": "^2.0.5",
     "react-scroll-to-component": "^1.0.2",
+    "react-simple-image-slider": "^1.0.2",
     "semantic-ui": "^2.4.2",
     "semantic-ui-react": "^0.86.0"
   },

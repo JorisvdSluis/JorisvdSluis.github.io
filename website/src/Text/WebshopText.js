@@ -16,7 +16,7 @@ class WebshopText extends React.Component {
                     I worked in a team of four members, where I designed several components including the shopping cart. </p>
                 <p style={{ fontSize: '1.33em' }}>Besides designing I created the communication between the backend and the payment system.
           </p>
-                <p style={{ fontSize: '1.33em' }}>This was a project created for the Rotterdam University of Applied Sciences.
+                <p style={{ fontSize: '1.33em',marginBottom:'11em' }}>This was a project created for the Rotterdam University of Applied Sciences.
           </p>
             </>
         )

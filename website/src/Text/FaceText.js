@@ -18,7 +18,7 @@ class FaceText extends React.Component {
                 <p style={{ fontSize: '1.33em' }}>
                     After a full research we desided to use Amazon Rekognition for the proof of concept.
           </p>
-                <p style={{ fontSize: '1.33em' }}>
+                <p style={{ fontSize: '1.33em', marginBottom:'11em'}}>
                     This was a project created for the Rotterdam University of Applied Sciences. </p>
             </>
         )

@@ -17,7 +17,7 @@ class AppText extends React.Component {
               </p>
                 <p style={{ fontSize: '1.33em' }}>I created several pages in the app, and created the communication between personal user stats and the Fortnite API.
           </p>
-                <p style={{ fontSize: '1.33em' }}>This was a project created for the Rotterdam University of Applied Sciences.
+                <p style={{ fontSize: '1.33em',marginBottom:'11em' }}>This was a project created for the Rotterdam University of Applied Sciences.
           </p>
             </>
         )

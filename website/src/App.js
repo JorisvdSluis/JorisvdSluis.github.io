@@ -16,6 +16,7 @@ import Head from "./Heading/Head";
 import Projects from "./Pages/Projects";
 import HeadMobile from "./Heading/HeadMobile";
 import { FaArrowDown } from "react-icons/fa";
+import Education from "./Pages/Education";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,7 @@ class App extends Component {
     this.experienceRef = React.createRef();
     this.skillsRef = React.createRef();
     this.projectsRef = React.createRef();
+    this.educationRef = React.createRef();
     this.state = {
       width: window.innerWidth
     };
@@ -55,7 +57,7 @@ class App extends Component {
     var scroll = Scroll.animateScroll;
     const { sidebarOpened } = this.state;
     const {active} = this.state;
-    const{activeButton} = this.state;
+    //const{activeButton} = this.state;
     if (isMobile) {
       return (
         < >
@@ -132,6 +134,12 @@ class App extends Component {
                   this.experienceRef = section;
                 }}
               />
+                            <Education
+              padding='5em 0em'
+                ref={section => {
+                  this.educationRef = section;
+                }}
+              />
               <Projects
               padding='5em 0em'
                 ref={section => {
@@ -192,6 +200,12 @@ class App extends Component {
                   </Menu.Item>
                   <Menu.Item
                     as="a"
+                    onClick={() => scrollToComponent(this.educationRef)}
+                  >
+                    Education
+                  </Menu.Item>
+                  <Menu.Item
+                    as="a"
                     onClick={() => scrollToComponent(this.projectsRef)}
                   >
                     Projects
@@ -216,6 +230,12 @@ class App extends Component {
            padding='20em 0em'
             ref={section => {
               this.experienceRef = section;
+            }}
+          />
+            <Education
+           padding='20em 0em'
+            ref={section => {
+              this.educationRef = section;
             }}
           />
           <Projects

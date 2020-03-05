@@ -1,0 +1,11 @@
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\obj\Debug\netcoreapp2.2\public.csprojAssemblyReference.cache
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\obj\Debug\netcoreapp2.2\public.csproj.CoreCompileInputs.cache
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\obj\Debug\netcoreapp2.2\public.AssemblyInfoInputs.cache
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\obj\Debug\netcoreapp2.2\public.AssemblyInfo.cs
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\bin\Debug\netcoreapp2.2\public.deps.json
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\bin\Debug\netcoreapp2.2\public.runtimeconfig.json
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\bin\Debug\netcoreapp2.2\public.runtimeconfig.dev.json
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\bin\Debug\netcoreapp2.2\public.dll
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\bin\Debug\netcoreapp2.2\public.pdb
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\obj\Debug\netcoreapp2.2\public.dll
+D:\Users\jjori\dev\JorisvdSluis.github.io\website\public\obj\Debug\netcoreapp2.2\public.pdb
