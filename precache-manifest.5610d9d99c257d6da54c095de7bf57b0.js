@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "28fe84d25224d8c1eae0065b5269f0b7",
-    "url": "/static/media/Game.28fe84d2.png"
+    "revision": "b5c309918e9af00c5cd31410d8e34cb3",
+    "url": "/static/media/App.b5c30991.png"
   },
   {
-    "revision": "2f48960b50852549b9ba",
-    "url": "/static/css/main.d85b3509.chunk.css"
+    "revision": "844ef2c6018f633d4b76",
+    "url": "/static/css/main.16e40e5d.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -16,8 +16,24 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "61798b6390ecac3a4de9",
-    "url": "/static/js/2.74dbbf76.chunk.js"
+    "revision": "81fbc116da455d3de8cf",
+    "url": "/static/js/2.5f0bd719.chunk.js"
+  },
+  {
+    "revision": "3457d2a80eb0cec4b4dad4babc718e79",
+    "url": "/static/media/cvs.3457d2a8.pdf"
+  },
+  {
+    "revision": "9d52b607571db77c8ada2961093d7500",
+    "url": "/static/media/rug.9d52b607.jpg"
+  },
+  {
+    "revision": "6cd04d3e0e3a9699d3d1673233baff4d",
+    "url": "/static/media/lvp.6cd04d3e.jpg"
+  },
+  {
+    "revision": "ddb56276ce6a792b4e61d959cb330dc0",
+    "url": "/static/media/coding.ddb56276.jpg"
   },
   {
     "revision": "8a50b602aa79b19775c22d02a290f51f",
@@ -68,18 +84,6 @@ self.__precacheManifest = [
     "url": "/static/media/mysql.cb3fd0f8.jpg"
   },
   {
-    "revision": "3457d2a80eb0cec4b4dad4babc718e79",
-    "url": "/static/media/cvs.3457d2a8.pdf"
-  },
-  {
-    "revision": "9d52b607571db77c8ada2961093d7500",
-    "url": "/static/media/rug.9d52b607.jpg"
-  },
-  {
-    "revision": "6cd04d3e0e3a9699d3d1673233baff4d",
-    "url": "/static/media/lvp.6cd04d3e.jpg"
-  },
-  {
     "revision": "ef33a62c4d6278faf0432de9e4d746c6",
     "url": "/static/media/banner4k.ef33a62c.png"
   },
@@ -88,12 +92,12 @@ self.__precacheManifest = [
     "url": "/static/media/webshop.452904d5.jpg"
   },
   {
-    "revision": "b5c309918e9af00c5cd31410d8e34cb3",
-    "url": "/static/media/App.b5c30991.png"
+    "revision": "844ef2c6018f633d4b76",
+    "url": "/static/js/main.a8e8f51d.chunk.js"
   },
   {
-    "revision": "2f48960b50852549b9ba",
-    "url": "/static/js/main.8b4a9b32.chunk.js"
+    "revision": "28fe84d25224d8c1eae0065b5269f0b7",
+    "url": "/static/media/Game.28fe84d2.png"
   },
   {
     "revision": "61855e1091909d3dd8e8140d708668b2",
@@ -112,10 +116,6 @@ self.__precacheManifest = [
     "url": "/static/media/banner4kmobile.3f83d412.png"
   },
   {
-    "revision": "ddb56276ce6a792b4e61d959cb330dc0",
-    "url": "/static/media/coding.ddb56276.jpg"
-  },
-  {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "/static/media/outline-icons.ef60a4f6.woff"
   },
@@ -124,16 +124,16 @@ self.__precacheManifest = [
     "url": "/static/media/outline-icons.cd6c777f.woff2"
   },
   {
+    "revision": "9c74e172f87984c48ddf5c8108cabe67",
+    "url": "/static/media/flags.9c74e172.png"
+  },
+  {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
     "url": "/static/media/outline-icons.701ae6ab.eot"
   },
   {
     "revision": "ad97afd3337e8cda302d10ff5a4026b8",
     "url": "/static/media/outline-icons.ad97afd3.ttf"
-  },
-  {
-    "revision": "9c74e172f87984c48ddf5c8108cabe67",
-    "url": "/static/media/flags.9c74e172.png"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
@@ -160,6 +160,10 @@ self.__precacheManifest = [
     "url": "/static/media/icons.b87b9ba5.ttf"
   },
   {
+    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
+    "url": "/static/media/brand-icons.c5ebe0b3.ttf"
+  },
+  {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/static/media/brand-icons.13db00b7.eot"
   },
@@ -168,19 +172,15 @@ self.__precacheManifest = [
     "url": "/static/media/outline-icons.82f60bd0.svg"
   },
   {
-    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
-    "url": "/static/media/brand-icons.c5ebe0b3.ttf"
-  },
-  {
     "revision": "962a1bf31c081691065fe333d9fa8105",
     "url": "/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "61798b6390ecac3a4de9",
+    "revision": "81fbc116da455d3de8cf",
     "url": "/static/css/2.edc383cd.chunk.css"
   },
   {
-    "revision": "0f7a887c94a65b8ced6bfd31b34ce325",
+    "revision": "926176cb6347f980ccdd4bc63c42bb8a",
     "url": "/index.html"
   }
 ];
