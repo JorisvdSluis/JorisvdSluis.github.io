@@ -15,8 +15,9 @@ import Experience from "./Pages/Experience";
 import Head from "./Heading/Head";
 import Projects from "./Pages/Projects";
 import HeadMobile from "./Heading/HeadMobile";
-import { FaArrowDown } from "react-icons/fa";
+import { FaArrowDown, FaLanguage } from "react-icons/fa";
 import Education from "./Pages/Education";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +27,8 @@ class App extends Component {
     this.projectsRef = React.createRef();
     this.educationRef = React.createRef();
     this.state = {
-      width: window.innerWidth
+      width: window.innerWidth,
+      languageIsDutch: true,
     };
   }
   componentWillMount() {
@@ -123,37 +125,44 @@ class App extends Component {
               </Segment>
 
               <About
+              language= {this.state.languageIsDutch}
               padding='5em 0em'
                 ref={section => {
                   this.aboutRef = section;
                 }}
               />
               <Experience
+               language= {this.state.languageIsDutch}
               padding='5em 0em'
                 ref={section => {
                   this.experienceRef = section;
                 }}
               />
                             <Education
+                             language= {this.state.languageIsDutch}
               padding='5em 0em'
                 ref={section => {
                   this.educationRef = section;
                 }}
               />
               <Projects
+               language= {this.state.languageIsDutch}
               padding='5em 0em'
                 ref={section => {
                   this.projectsRef = section;
                 }}
               />
               <Skills
+               language= {this.state.languageIsDutch}
               padding='5em 0em'
               columns={1}
                 ref={section => {
                   this.skillsRef = section;
                 }}
               />
-              <Footer padding='5em 0em'/>
+              <Footer
+               language= {this.state.languageIsDutch}
+              padding='5em 0em'/>
             </Sidebar.Pusher>
           </Visibility>
         </>
@@ -184,61 +193,71 @@ class App extends Component {
               <Container>
                 <Menu.Item position="right">
                   <Menu.Item as="a" active={active} onClick={() => scroll.scrollTo(0)}>
-                    Home
+                   Home
                   </Menu.Item>
                   <Menu.Item
                     as="a"
                     onClick={() => scrollToComponent(this.aboutRef)}
                   >
-                    About
+                    {this.state.languageIsDutch ? "Over" : "About"}
                   </Menu.Item>
                   <Menu.Item
                     as="a"
                     onClick={() => scrollToComponent(this.experienceRef)}
                   >
-                    Experience
+                   {this.state.languageIsDutch ? "Ervaring" : "Experience"}
                   </Menu.Item>
                   <Menu.Item
                     as="a"
                     onClick={() => scrollToComponent(this.educationRef)}
                   >
-                    Education
+                    {this.state.languageIsDutch ? "Scholing" : "Education"}
                   </Menu.Item>
                   <Menu.Item
                     as="a"
                     onClick={() => scrollToComponent(this.projectsRef)}
                   >
-                    Projects
+                    {this.state.languageIsDutch ? "Projecten" : "Projects"}
                   </Menu.Item>
                   <Menu.Item
                     as="a"
                     onClick={() => scrollToComponent(this.skillsRef)}
                   >
-                    Skills
+                    {this.state.languageIsDutch ? "Kennis" : "Skills"}
+                  </Menu.Item>
+                  <Menu.Item
+                    
+                    onClick={() => this.setState({languageIsDutch: !this.state.languageIsDutch})}
+                  >
+                    <FaLanguage id="language" size = '1.5em'/>
                   </Menu.Item>
                 </Menu.Item>
               </Container>
             </Menu>
           </Visibility>
           <About
+          language= {this.state.languageIsDutch}
           padding='20em 0em'
             ref={section => {
               this.aboutRef = section;
             }}
           />
           <Experience
+          language= {this.state.languageIsDutch}
            padding='20em 0em'
             ref={section => {
               this.experienceRef = section;
             }}
           />
             <Education
+            language= {this.state.languageIsDutch}
            padding='20em 0em'
             ref={section => {
               this.educationRef = section;
             }}
           />
           <Projects
+          language= {this.state.languageIsDutch}
            padding='20em 0em'
            display="none"
             ref={section => {
@@ -246,13 +265,16 @@ class App extends Component {
             }}
           />
           <Skills
+           language= {this.state.languageIsDutch}
            padding='20em 0em'
            columns={2}
             ref={section => {
               this.skillsRef = section;
             }}
           />
-          <Footer padding='5em 0em' />
+          <Footer
+          language= {this.state.languageIsDutch}
+          padding='5em 0em' />
         </>
       );
     }

@@ -30,7 +30,7 @@ class Skills extends React.Component {
             <GridColumn>
               <Header as='h3' style={{ fontSize: '2em' }}>
               <br/>
-                Skills
+               {this.props.language ? "Kennis" :"Skills"}
             </Header>
 
             </GridColumn>
@@ -47,9 +47,9 @@ class Skills extends React.Component {
                   <GridColumn><LangCard image={dart} title="Dart" subtitle="" ></LangCard></GridColumn>
                 </GridRow>
                 <GridRow>
-                <GridColumn><LangCard image={react} title="React" subtitle="Created with Typescript" ></LangCard></GridColumn>
-                <GridColumn><LangCard image={flutter} title="Flutter" subtitle="Created with Dart" ></LangCard></GridColumn>
-                <GridColumn><LangCard image={angular} title="Angular" subtitle="Created with Typescript" ></LangCard></GridColumn>
+                <GridColumn><LangCard image={react} title="React" subtitle=  {this.props.language ?"Gemaakt met Typescript":"Created with Typescript"} ></LangCard></GridColumn>
+                <GridColumn><LangCard image={flutter} title="Flutter" subtitle=  {this.props.language ?"Gemaakt met Dart": "Created with Dart"} ></LangCard></GridColumn>
+                <GridColumn><LangCard image={angular} title="Angular" subtitle=  {this.props.language ?"Gemaakt met Typescript":"Created with Typescript"}></LangCard></GridColumn>
                 <GridColumn><LangCard image={net} title=".NET" subtitle="" ></LangCard></GridColumn>
 
                 </GridRow>

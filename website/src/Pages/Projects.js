@@ -7,6 +7,12 @@ import GameText from "../Text/GameText";
 import FaceText from "../Text/FaceText";
 import CevedeText from "../Text/CevedeText";
 import SeatplanText from "../Text/SeatplanText";
+import WebshopDutchText from "../Text/WebshopDutchText";
+import AppDutchText from "../Text/AppDutchText";
+import GameDutchText from "../Text/GameDutchText";
+import FaceDutchText from "../Text/FaceDutchText";
+import CevedeDutchText from "../Text/CevedeDutchText";
+import SeatplanDutchText from "../Text/SeatplanDutchText";
 import AppImage from "../assets/App.png";
 import GameImage from "../assets/Game.png";
 import FaceImage from "../assets/face.jpg";
@@ -27,28 +33,15 @@ class Projects extends React.Component {
     this.state = {
       selectedPhoto: this.projectsEnum.cevede,
       userClicked: false,
-      Timer: undefined
     };
-    this.setNextPhoto = this.setNextPhoto.bind(this);
   }
-  setNextPhoto() {
-    if (!this.state.userClicked) {
-      if (this.state.selectedPhoto === 5) {
-        this.setState({ selectedPhoto: 0 });
-      } else {
-        this.setState({ selectedPhoto: this.state.selectedPhoto + 1 });
-      }
-      this.setState({ Timer: setTimeout(this.setNextPhoto, 10000) });
-    }
-  }
+
   handleClick(photoId) {
     this.setState({ selectedPhoto: photoId, userClicked: true });
-    clearTimeout(this.state.Timer);
   }
-  componentWillReceiveProps() {
-    this.setNextPhoto();
-  }
+
   render() {
+    console.log(this.props.language)
     return (
       <Segment style={{ padding: this.props.padding }} vertical>
         <Grid container stackable verticalAlign="middle">
@@ -170,22 +163,40 @@ class Projects extends React.Component {
             </Grid.Column>
             <Grid.Column width={1}></Grid.Column>
             <Grid.Column width={6}>
-              {this.state.selectedPhoto === this.projectsEnum.app && (
+              {this.state.selectedPhoto === this.projectsEnum.app && this.props.language && (
+                <AppDutchText />
+              )}
+                {this.state.selectedPhoto === this.projectsEnum.app && !this.props.language && (
                 <AppText />
               )}
-              {this.state.selectedPhoto === this.projectsEnum.face && (
+              {this.state.selectedPhoto === this.projectsEnum.face && this.props.language && (
+                <FaceDutchText />
+              )}
+              {this.state.selectedPhoto === this.projectsEnum.face && !this.props.language && (
                 <FaceText />
               )}
-              {this.state.selectedPhoto === this.projectsEnum.python && (
+              {this.state.selectedPhoto === this.projectsEnum.python && this.props.language && (
+                <GameDutchText />
+              )}
+               {this.state.selectedPhoto === this.projectsEnum.python && !this.props.language && (
                 <GameText />
               )}
-              {this.state.selectedPhoto === this.projectsEnum.webshop && (
+              {this.state.selectedPhoto === this.projectsEnum.webshop && this.props.language  && (
+                <WebshopDutchText  />
+              )}
+               {this.state.selectedPhoto === this.projectsEnum.webshop && !this.props.language  && (
                 <WebshopText  />
               )}
-               {this.state.selectedPhoto === this.projectsEnum.cevede && (
+               {this.state.selectedPhoto === this.projectsEnum.cevede && this.props.language  && (
+                <CevedeDutchText />
+              )}
+                {this.state.selectedPhoto === this.projectsEnum.cevede && !this.props.language  && (
                 <CevedeText />
               )}
-               {this.state.selectedPhoto === this.projectsEnum.seatplan && (
+               {this.state.selectedPhoto === this.projectsEnum.seatplan && this.props.language && (
+                <SeatplanDutchText />
+              )}
+               {this.state.selectedPhoto === this.projectsEnum.seatplan && !this.props.language && (
                 <SeatplanText />
               )}
             </Grid.Column>

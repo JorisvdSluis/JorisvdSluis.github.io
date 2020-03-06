@@ -13,9 +13,9 @@ class Footer extends React.Component {
                   About
                 </Header>
                 <p>
-                  This website is created with React.
+                 {this.props.language ? "Deze website heb ik ontwikkeld met React": "I created this website with React."}
                   <br />
-                  For more info contact me via{" "}
+                  {this.props.language ?"Voor meer informatie neem contact op via" :"  For more info contact me via"}{" "}
                   <a
                     style={{ color: "lime" }}
                     href="https://www.linkedin.com/in/joris-van-der-sluis-a39a13152/"

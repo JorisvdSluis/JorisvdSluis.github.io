@@ -53,3 +53,8 @@
 {
 	background-color:  rgba(0,0,0,.87);
 }
+#language{
+    color:  lime;
+    height: 30px;
+    z-index: 20;
+ }
