@@ -37,6 +37,19 @@
    animation-duration: 2s;
    animation-iteration-count: infinite
 }
+#Arrow2{
+    color:  dimgray;
+    z-index: 2;
+    position: absolute;
+    animation-name: Arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite
+ }
+ #ArrowText{
+    margin-top: 3vmax;
+    margin-left: 4vmax;
+    font-size: large;
+ }
 ::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);

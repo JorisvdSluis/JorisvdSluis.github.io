@@ -18,6 +18,7 @@ import GameImage from "../assets/Game.png";
 import FaceImage from "../assets/face.jpg";
 import cevede from "../assets/cevede.png";
 import seatplan from "../assets/seatplan.jpg";
+import { FaArrowUp } from "react-icons/fa";
 import "./Projects.css";
 class Projects extends React.Component {
   projectsEnum = {
@@ -158,10 +159,17 @@ class Projects extends React.Component {
                       this.projectsEnum.python
                     )}
                   />
+   
                 </Grid.Column>
+                
               </Grid>
+              <FaArrowUp
+             id="Arrow2"
+            size="2.5em"
+           
+          /><div id="ArrowText">{this.props.language ? "Klik op een afbeelding!" : "Click an image!"}</div>
             </Grid.Column>
-            <Grid.Column width={1}></Grid.Column>
+            <Grid.Column width={1}>     </Grid.Column>
             <Grid.Column width={6}>
               {this.state.selectedPhoto === this.projectsEnum.app && this.props.language && (
                 <AppDutchText />
