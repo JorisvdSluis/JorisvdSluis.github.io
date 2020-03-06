@@ -19,3 +19,20 @@
     z-index: 1;
     position: relative;
 }
+.Image{
+    align-self: center;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+} 
+#mobileLanguage{
+    margin-left: 15.5vmax;
+    color:  lime;
+    height: 30px;
+    z-index: 2;
+    position: absolute;
+ }
+ #mobilehead{
+    z-index: 1;
+    position: relative;
+}

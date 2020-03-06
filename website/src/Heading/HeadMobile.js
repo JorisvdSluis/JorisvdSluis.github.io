@@ -1,6 +1,7 @@
 import React from 'react'
 import banner from '../assets/banner4kmobile.png'
-import '../App.css'
+import './Head.css'
+import { FaLanguage } from "react-icons/fa";
 import {
     Image, 
   
@@ -9,7 +10,13 @@ class HeadMobile extends React.Component {
     render() {
         return (
             <>
-                <Image className="Image" src={banner}  />
+                      <div
+                    
+                    onClick={this.props.setLanguage}
+                  >
+                    <FaLanguage id="mobileLanguage" size = '1.5em'/>
+                  </div>
+                <Image style={{zindex: 1}} src={banner}  />
             </>
         )
     }

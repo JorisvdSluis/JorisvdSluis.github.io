@@ -121,7 +121,7 @@ class App extends Component {
                 vertical
               >
                 {/* <Container style={{ minHeight: 40, padding: "0em 0em" }} /> */}
-                <HeadMobile/>
+                <HeadMobile  setLanguage= {() => this.setState({languageIsDutch :!this.state.languageIsDutch})}/>
               </Segment>
 
               <About
