@@ -26,7 +26,8 @@
     position: relative;
 } 
 #mobileLanguage{
-    margin-left: 18.5vmax;
+    margin-top: 1.5vmax;
+    margin-left: 19.5vmax;
     color:  lime;
     height: 30px;
     z-index: 2;

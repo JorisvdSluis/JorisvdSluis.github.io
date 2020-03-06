@@ -167,7 +167,7 @@ class Projects extends React.Component {
              id="Arrow2"
             size="2.5em"
            
-          /><div id="ArrowText">{this.props.language ? "Klik op een afbeelding!" : "Click an image!"}</div>
+          /><div id={this.props.isMobile ? "ArrowMobileText":"ArrowText"}>{this.props.language ? "Klik op een afbeelding!" : "Click an image!"}</div>
             </Grid.Column>
             <Grid.Column width={1}>     </Grid.Column>
             <Grid.Column width={6}>

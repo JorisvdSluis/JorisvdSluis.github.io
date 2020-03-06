@@ -46,8 +46,13 @@
     animation-iteration-count: infinite
  }
  #ArrowText{
-    margin-top: 6vmax;
+    margin-top: 3vmax;
     margin-left: 4vmax;
+    font-size: large;
+ }
+ #ArrowMobileText{
+    margin-top: 6vmax;
+    margin-left: 5vmax;
     font-size: large;
  }
 ::-webkit-scrollbar-track

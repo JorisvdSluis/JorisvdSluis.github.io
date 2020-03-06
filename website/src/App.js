@@ -146,6 +146,7 @@ class App extends Component {
                 }}
               />
               <Projects
+              isMobile= {this.isMobile}
                language= {this.state.languageIsDutch}
               padding='5em 0em'
                 ref={section => {
@@ -257,6 +258,7 @@ class App extends Component {
             }}
           />
           <Projects
+                        isMobile= {this.isMobile}
           language= {this.state.languageIsDutch}
            padding='20em 0em'
            display="none"
