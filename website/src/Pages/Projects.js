@@ -42,7 +42,6 @@ class Projects extends React.Component {
   }
 
   render() {
-    console.log(this.props.language)
     return (
       <Segment style={{ padding: this.props.padding }} vertical>
         <Grid container stackable verticalAlign="middle">

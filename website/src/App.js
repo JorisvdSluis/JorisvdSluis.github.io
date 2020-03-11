@@ -180,6 +180,7 @@ class App extends Component {
             onClick={() => scrollToComponent(this.aboutRef)}
           />
           <Visibility
+            style={{marginTop: '-50px'}}
             once={false}
             onBottomPassed={this.showFixedMenu}
             onBottomPassedReverse={this.hideFixedMenu}
