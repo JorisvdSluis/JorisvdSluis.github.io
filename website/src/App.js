@@ -16,10 +16,11 @@ import Experience from "./Pages/Experience";
 import Head from "./Heading/Head";
 import Projects from "./Pages/Projects";
 import HeadMobile from "./Heading/HeadMobile";
-import { FaArrowDown, FaLanguage } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 import Education from "./Pages/Education";
 import NL from "../src/assets/nl.png";
 import UK from "../src/assets/uk.png";
+import Helmet from "react-helmet";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -33,19 +34,15 @@ class App extends Component {
       languageIsDutch: true,
       fixed: false,
       active: true,
-      mount: false,
+      mount: false
     };
   }
   componentWillMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
   }
 
-  componentDidMount(){
-
-    setInterval(
-      () =>   this.setState({mount: true}),
-      1000
-    );
+  componentDidMount() {
+    setInterval(() => this.setState({ mount: true }), 1000);
   }
   // make sure to remove the listener
   // when the component is not mounted anymore
@@ -58,11 +55,16 @@ class App extends Component {
   };
 
   state = {};
-  showFixedMenu = () =>{
-    if(this.state.mount){
-    this.setState({ fixed: true, active: false, activeButton: "about" }); console.log(this.state.fixed);}
-  }
-  hideFixedMenu = () => {this.setState({ fixed: false, active: true }); console.log(this.state.fixed);}
+  showFixedMenu = () => {
+    if (this.state.mount) {
+      this.setState({ fixed: true, active: false, activeButton: "about" });
+      console.log(this.state.fixed);
+    }
+  };
+  hideFixedMenu = () => {
+    this.setState({ fixed: false, active: true });
+    console.log(this.state.fixed);
+  };
   handleSidebarHide = () => this.setState({ sidebarOpened: false });
   handleToggle = () => this.setState({ sidebarOpened: true });
 
@@ -78,8 +80,13 @@ class App extends Component {
     if (isMobile) {
       return (
         <>
-
-            {/* <Menu
+          <Helmet>
+            <meta
+              name="google-site-verification"
+              content="B7ZfymA0oyRYRpySPxbi7qRT5zjV-1AkclLo6VHhk5A"
+            />
+          </Helmet>
+          {/* <Menu
               as={Menu}
               animation="push"
               inverted
@@ -123,87 +130,90 @@ class App extends Component {
                 Skills
               </Menu.Item>
             </Menu> */}
-            <Sidebar.Pusher dimmed={sidebarOpened}>
-              <Segment
-                inverted
-                textAlign="center"
-                style={{ minHeight: 0, padding: "0em 0em" }}
-                vertical
-              >
-                {/* <Container style={{ minHeight: 40, padding: "0em 0em" }} /> */}
-                <HeadMobile
-                  setLanguage={() =>
-                    this.setState({
-                      languageIsDutch: !this.state.languageIsDutch
-                    })
-                  }
-                />
-              </Segment>
+          <Sidebar.Pusher dimmed={sidebarOpened}>
+            <Segment
+              inverted
+              textAlign="center"
+              style={{ minHeight: 0, padding: "0em 0em" }}
+              vertical
+            >
+              {/* <Container style={{ minHeight: 40, padding: "0em 0em" }} /> */}
+              <HeadMobile
+                setLanguage={() =>
+                  this.setState({
+                    languageIsDutch: !this.state.languageIsDutch
+                  })
+                }
+              />
+            </Segment>
 
-              <About
-                language={this.state.languageIsDutch}
-                padding="5em 0em"
-                ref={section => {
-                  this.aboutRef = section;
-                }}
-              />
-              <Experience
-                language={this.state.languageIsDutch}
-                padding="5em 0em"
-                ref={section => {
-                  this.experienceRef = section;
-                }}
-              />
-              <Education
-                language={this.state.languageIsDutch}
-                padding="5em 0em"
-                ref={section => {
-                  this.educationRef = section;
-                }}
-              />
-              <Projects
-                isMobile={this.isMobile}
-                language={this.state.languageIsDutch}
-                padding="5em 0em"
-                ref={section => {
-                  this.projectsRef = section;
-                }}
-              />
-              <Skills
-                language={this.state.languageIsDutch}
-                padding="5em 0em"
-                columns={1}
-                ref={section => {
-                  this.skillsRef = section;
-                }}
-              />
-              <Footer language={this.state.languageIsDutch} padding="5em 0em" />
-            </Sidebar.Pusher>
+            <About
+              language={this.state.languageIsDutch}
+              padding="5em 0em"
+              ref={section => {
+                this.aboutRef = section;
+              }}
+            />
+            <Experience
+              language={this.state.languageIsDutch}
+              padding="5em 0em"
+              ref={section => {
+                this.experienceRef = section;
+              }}
+            />
+            <Education
+              language={this.state.languageIsDutch}
+              padding="5em 0em"
+              ref={section => {
+                this.educationRef = section;
+              }}
+            />
+            <Projects
+              isMobile={this.isMobile}
+              language={this.state.languageIsDutch}
+              padding="5em 0em"
+              ref={section => {
+                this.projectsRef = section;
+              }}
+            />
+            <Skills
+              language={this.state.languageIsDutch}
+              padding="5em 0em"
+              columns={1}
+              ref={section => {
+                this.skillsRef = section;
+              }}
+            />
+            <Footer language={this.state.languageIsDutch} padding="5em 0em" />
+          </Sidebar.Pusher>
         </>
       );
     } else {
       return (
         <>
-          {" "}
-          <Head 
-          
-          />
-            <Visibility
-            style={{marginTop:"-50px",  border: "solid 1px red"}}
+          <Helmet>
+            <meta
+              name="google-site-verification"
+              content="B7ZfymA0oyRYRpySPxbi7qRT5zjV-1AkclLo6VHhk5A"
+            />
+          </Helmet>{" "}
+          <Head />
+          <Visibility
+            style={{ marginTop: "-50px", border: "solid 1px red" }}
             once={false}
-            onOnScreen ={this.hideFixedMenu}
+            onOnScreen={this.hideFixedMenu}
             onOffScreen={this.showFixedMenu}
           ></Visibility>
           <Visibility
-            style={{marginTop:"-50px",  border: "solid 1px red"}}
+            style={{ marginTop: "-50px", border: "solid 1px red" }}
             once={false}
             // onBottomPassed={this.showFixedMenu}
             // onBottomPassedReverse={this.hideFixedMenu}
           >
             <Menu
               fixed="top"
-               inverted={!this.state.fixed}
-               secondary={!this.state.fixed}
+              inverted={!this.state.fixed}
+              secondary={!this.state.fixed}
               borderless
               size="huge"
             >
@@ -247,13 +257,22 @@ class App extends Component {
                     {this.state.languageIsDutch ? "Kennis" : "Skills"}
                   </Menu.Item>
                   <div
-                    style={{paddingLeft:"1em" ,paddingRight: "0", marginRight:'0', cursor:'pointer' }}
+                    style={{
+                      paddingLeft: "1em",
+                      paddingRight: "0",
+                      marginRight: "0",
+                      cursor: "pointer"
+                    }}
                     onClick={() => this.setState({ languageIsDutch: true })}
                   >
                     <Image id="country" src={NL} />
                   </div>
                   <div
-                    style={{ paddingLeft: "0", marginLeft: '0' ,cursor:'pointer'}}
+                    style={{
+                      paddingLeft: "0",
+                      marginLeft: "0",
+                      cursor: "pointer"
+                    }}
                     onClick={() => this.setState({ languageIsDutch: false })}
                   >
                     <Image id="country" src={UK} />
