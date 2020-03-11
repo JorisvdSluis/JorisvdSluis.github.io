@@ -188,12 +188,12 @@ class App extends Component {
         <>{" "}
           <Head />
           <Visibility
-            style={{ marginTop: "-50px", border: "solid 1px red" }}
+            style={{ marginTop: "-50px"}}
             continuous ={true}
             onUpdate={this.handleUpdate}
           ></Visibility>
           <Visibility
-            style={{ marginTop: "-50px", border: "solid 1px red" }}
+            style={{ marginTop: "-50px" }}
           >
             <Menu
               fixed="top"
