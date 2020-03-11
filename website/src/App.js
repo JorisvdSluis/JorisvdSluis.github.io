@@ -34,16 +34,28 @@ class App extends Component {
       languageIsDutch: true,
       fixed: false,
       active: true,
-      mount: false
+      mount: false,
+      calculations: {
+        direction: 'none',
+        height: 0,
+        width: 0,
+        topPassed: false,
+        bottomPassed: false,
+        pixelsPassed: 0,
+        percentagePassed: 0,
+        topVisible: false,
+        bottomVisible: false,
+        fits: false,
+        passing: false,
+        onScreen: false,
+        offScreen: false,
+      },
     };
   }
   componentWillMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
   }
 
-  componentDidMount() {
-    setInterval(() => this.setState({ mount: true }), 1000);
-  }
   // make sure to remove the listener
   // when the component is not mounted anymore
   componentWillUnmount() {
@@ -55,19 +67,8 @@ class App extends Component {
   };
 
   state = {};
-  showFixedMenu = () => {
-    if (this.state.mount) {
-      this.setState({ fixed: true, active: false, activeButton: "about" });
-      console.log(this.state.fixed);
-    }
-  };
-  hideFixedMenu = () => {
-    this.setState({ fixed: false, active: true });
-    console.log(this.state.fixed);
-  };
-  handleSidebarHide = () => this.setState({ sidebarOpened: false });
-  handleToggle = () => this.setState({ sidebarOpened: true });
 
+  handleUpdate = (e, { calculations }) => this.setState({ fixed: !calculations.onScreen});
   render() {
     const { width } = this.state;
     const isMobile = width <= 500;
@@ -188,15 +189,11 @@ class App extends Component {
           <Head />
           <Visibility
             style={{ marginTop: "-50px", border: "solid 1px red" }}
-            once={false}
-            onOnScreen={this.hideFixedMenu}
-            onOffScreen={this.showFixedMenu}
+            continuous ={true}
+            onUpdate={this.handleUpdate}
           ></Visibility>
           <Visibility
             style={{ marginTop: "-50px", border: "solid 1px red" }}
-            once={false}
-            // onBottomPassed={this.showFixedMenu}
-            // onBottomPassedReverse={this.hideFixedMenu}
           >
             <Menu
               fixed="top"
