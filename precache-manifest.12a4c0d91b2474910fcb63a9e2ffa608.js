@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/App.b5c30991.png"
   },
   {
-    "revision": "5a51a22e3874f6687c9c",
-    "url": "/static/css/main.28eb38e8.chunk.css"
+    "revision": "9f8f193847a5ab83ddbc",
+    "url": "/static/css/main.939d7e2c.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "81fbc116da455d3de8cf",
-    "url": "/static/js/2.5f0bd719.chunk.js"
+    "revision": "324d15e3199f17dcf32e",
+    "url": "/static/js/2.53651529.chunk.js"
   },
   {
     "revision": "3457d2a80eb0cec4b4dad4babc718e79",
@@ -92,8 +92,8 @@ self.__precacheManifest = [
     "url": "/static/media/webshop.452904d5.jpg"
   },
   {
-    "revision": "5a51a22e3874f6687c9c",
-    "url": "/static/js/main.e66ac6bd.chunk.js"
+    "revision": "9f8f193847a5ab83ddbc",
+    "url": "/static/js/main.3db5e169.chunk.js"
   },
   {
     "revision": "28fe84d25224d8c1eae0065b5269f0b7",
@@ -116,12 +116,12 @@ self.__precacheManifest = [
     "url": "/static/media/banner4kmobile.3f83d412.png"
   },
   {
-    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
-    "url": "/static/media/outline-icons.ef60a4f6.woff"
-  },
-  {
     "revision": "cd6c777f1945164224dee082abaea03a",
     "url": "/static/media/outline-icons.cd6c777f.woff2"
+  },
+  {
+    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
+    "url": "/static/media/outline-icons.ef60a4f6.woff"
   },
   {
     "revision": "9c74e172f87984c48ddf5c8108cabe67",
@@ -152,20 +152,20 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a046592b.woff"
   },
   {
-    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
-    "url": "/static/media/icons.b87b9ba5.ttf"
-  },
-  {
     "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
     "url": "/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
-    "url": "/static/media/brand-icons.c5ebe0b3.ttf"
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/static/media/icons.b87b9ba5.ttf"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
+    "url": "/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
@@ -176,11 +176,11 @@ self.__precacheManifest = [
     "url": "/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "81fbc116da455d3de8cf",
+    "revision": "324d15e3199f17dcf32e",
     "url": "/static/css/2.edc383cd.chunk.css"
   },
   {
-    "revision": "693e602f09aae08c40e2cbfd7ff2c723",
+    "revision": "d219f7663b5210d559f1f0415c16dec5",
     "url": "/index.html"
   }
 ];
