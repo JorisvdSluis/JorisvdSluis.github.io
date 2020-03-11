@@ -28,6 +28,7 @@
 }
 
 #Arrow{
+    margin-top: 7em;
    margin-left: 50vmax;
    color:  dimgray;
    z-index: 2;

@@ -31,13 +31,22 @@ class App extends Component {
     this.state = {
       width: window.innerWidth,
       languageIsDutch: true,
-      fixed: false
+      fixed: false,
+      active: true,
+      mount: false,
     };
   }
   componentWillMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
   }
 
+  componentDidMount(){
+
+    setInterval(
+      () =>   this.setState({mount: true}),
+      1000
+    );
+  }
   // make sure to remove the listener
   // when the component is not mounted anymore
   componentWillUnmount() {
@@ -49,16 +58,18 @@ class App extends Component {
   };
 
   state = {};
-  hideFixedMenu = () => this.setState({ fixed: false, active: true });
-  showFixedMenu = () =>
-    this.setState({ fixed: true, active: false, activeButton: "about" });
+  showFixedMenu = () =>{
+    if(this.state.mount){
+    this.setState({ fixed: true, active: false, activeButton: "about" }); console.log(this.state.fixed);}
+  }
+  hideFixedMenu = () => {this.setState({ fixed: false, active: true }); console.log(this.state.fixed);}
   handleSidebarHide = () => this.setState({ sidebarOpened: false });
   handleToggle = () => this.setState({ sidebarOpened: true });
 
   render() {
     const { width } = this.state;
     const isMobile = width <= 500;
-    const { fixed } = this.state;
+    // const { fixed } = this.state;
     const Scroll = require("react-scroll");
     var scroll = Scroll.animateScroll;
     const { sidebarOpened } = this.state;
@@ -67,12 +78,7 @@ class App extends Component {
     if (isMobile) {
       return (
         <>
-          <Visibility
-            style={{ overflowY: "hidden", overflowX: "hidden" }}
-            once={false}
-            onBottomPassed={this.showFixedMenu}
-            onBottomPassedReverse={this.hideFixedMenu}
-          >
+
             {/* <Menu
               as={Menu}
               animation="push"
@@ -173,30 +179,31 @@ class App extends Component {
               />
               <Footer language={this.state.languageIsDutch} padding="5em 0em" />
             </Sidebar.Pusher>
-          </Visibility>
         </>
       );
     } else {
       return (
         <>
           {" "}
-          <Head />
-          <FaArrowDown
-            id="Arrow"
-            size="2.5em"
-            as="a"
-            onClick={() => scrollToComponent(this.aboutRef)}
+          <Head 
+          
           />
-          <Visibility
-            style={{ marginTop: "-50px" }}
+            <Visibility
+            style={{marginTop:"-50px",  border: "solid 1px red"}}
             once={false}
-            onBottomPassed={this.showFixedMenu}
-            onBottomPassedReverse={this.hideFixedMenu}
+            onOnScreen ={this.hideFixedMenu}
+            onOffScreen={this.showFixedMenu}
+          ></Visibility>
+          <Visibility
+            style={{marginTop:"-50px",  border: "solid 1px red"}}
+            once={false}
+            // onBottomPassed={this.showFixedMenu}
+            // onBottomPassedReverse={this.hideFixedMenu}
           >
             <Menu
-              fixed={fixed ? "top" : "top"}
-              inverted={fixed ? !fixed : !fixed}
-              secondary={fixed ? !fixed : !fixed}
+              fixed="top"
+               inverted={!this.state.fixed}
+               secondary={!this.state.fixed}
               borderless
               size="huge"
             >
@@ -239,22 +246,28 @@ class App extends Component {
                   >
                     {this.state.languageIsDutch ? "Kennis" : "Skills"}
                   </Menu.Item>
-                  <Menu.Item
-                    style={{ paddingRight: "0", marginRight:'0' }}
+                  <div
+                    style={{paddingLeft:"1em" ,paddingRight: "0", marginRight:'0', cursor:'pointer' }}
                     onClick={() => this.setState({ languageIsDutch: true })}
                   >
                     <Image id="country" src={NL} />
-                  </Menu.Item>
-                  <Menu.Item
-                    style={{ paddingLeft: "0", marginLeft: '0'}}
+                  </div>
+                  <div
+                    style={{ paddingLeft: "0", marginLeft: '0' ,cursor:'pointer'}}
                     onClick={() => this.setState({ languageIsDutch: false })}
                   >
                     <Image id="country" src={UK} />
-                  </Menu.Item>
+                  </div>
                 </Menu.Item>
               </Container>
             </Menu>
           </Visibility>
+          <FaArrowDown
+            id="Arrow"
+            size="2.5em"
+            as="a"
+            onClick={() => scrollToComponent(this.aboutRef)}
+          />
           <About
             language={this.state.languageIsDutch}
             padding="20em 0em"
