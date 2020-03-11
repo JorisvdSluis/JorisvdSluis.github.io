@@ -81,58 +81,12 @@ class App extends Component {
     if (isMobile) {
       return (
         <>
-          {/* <Menu
-              as={Menu}
-              animation="push"
-              inverted
-              onHide={this.handleSidebarHide}
-              size="medium"
-              visible={sidebarOpened}
-              fixed={fixed ? "top" : "top"}
-            >
-              <Menu.Item
-                as="a"
-                onClick={() =>
-                  scrollToComponent(this.aboutRef) && this.handleSidebarHide()
-                }
-              >
-                About
-              </Menu.Item>
-              <Menu.Item
-                as="a"
-                onClick={() =>
-                  scrollToComponent(this.experienceRef) &&
-                  this.handleSidebarHide()
-                }
-              >
-                Experience
-              </Menu.Item>
-              <Menu.Item
-                as="a"
-                onClick={() =>
-                  scrollToComponent(this.projectsRef) &&
-                  this.handleSidebarHide()
-                }
-              >
-                Projects
-              </Menu.Item>
-              <Menu.Item
-                as="a"
-                onClick={() =>
-                  scrollToComponent(this.skillsRef) && this.handleSidebarHide()
-                }
-              >
-                Skills
-              </Menu.Item>
-            </Menu> */}
-          <Sidebar.Pusher dimmed={sidebarOpened}>
             <Segment
               inverted
               textAlign="center"
               style={{ minHeight: 0, padding: "0em 0em" }}
               vertical
             >
-              {/* <Container style={{ minHeight: 40, padding: "0em 0em" }} /> */}
               <HeadMobile
                 setLanguage={() =>
                   this.setState({
@@ -180,7 +134,6 @@ class App extends Component {
               }}
             />
             <Footer language={this.state.languageIsDutch} padding="5em 0em" />
-          </Sidebar.Pusher>
         </>
       );
     } else {

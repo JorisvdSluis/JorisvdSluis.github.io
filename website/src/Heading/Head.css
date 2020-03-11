@@ -27,11 +27,13 @@
 } 
 #mobileLanguage{
     margin-top: 1.5vmax;
-    margin-left: 19.5vmax;
+    margin-left: 80%;
     color:  lime;
     height: 30px;
     z-index: 2;
     position: absolute;
+    display: flex;
+    flex-direction: row;
  }
  #mobilehead{
     z-index: 1;
