@@ -20,7 +20,7 @@ import { FaArrowDown } from "react-icons/fa";
 import Education from "./Pages/Education";
 import NL from "../src/assets/nl.png";
 import UK from "../src/assets/uk.png";
-import Helmet from "react-helmet";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -80,12 +80,6 @@ class App extends Component {
     if (isMobile) {
       return (
         <>
-          <Helmet>
-            <meta
-              name="google-site-verification"
-              content="B7ZfymA0oyRYRpySPxbi7qRT5zjV-1AkclLo6VHhk5A"
-            />
-          </Helmet>
           {/* <Menu
               as={Menu}
               animation="push"
@@ -190,13 +184,7 @@ class App extends Component {
       );
     } else {
       return (
-        <>
-          <Helmet>
-            <meta
-              name="google-site-verification"
-              content="B7ZfymA0oyRYRpySPxbi7qRT5zjV-1AkclLo6VHhk5A"
-            />
-          </Helmet>{" "}
+        <>{" "}
           <Head />
           <Visibility
             style={{ marginTop: "-50px", border: "solid 1px red" }}
