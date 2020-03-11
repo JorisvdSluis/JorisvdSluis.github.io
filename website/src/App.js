@@ -6,7 +6,8 @@ import {
   Menu,
   Visibility,
   Sidebar,
-  Segment
+  Segment,
+  Image
 } from "semantic-ui-react";
 import Footer from "./Pages/Footer";
 import Skills from "./Pages/Skills";
@@ -17,7 +18,8 @@ import Projects from "./Pages/Projects";
 import HeadMobile from "./Heading/HeadMobile";
 import { FaArrowDown, FaLanguage } from "react-icons/fa";
 import Education from "./Pages/Education";
-
+import NL from "../src/assets/nl.png";
+import UK from "../src/assets/uk.png";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,6 +31,7 @@ class App extends Component {
     this.state = {
       width: window.innerWidth,
       languageIsDutch: true,
+      fixed: false
     };
   }
   componentWillMount() {
@@ -46,8 +49,9 @@ class App extends Component {
   };
 
   state = {};
-  hideFixedMenu = () => this.setState({ fixed: false, active: true});
-  showFixedMenu = () => this.setState({ fixed: true , active: false, activeButton:"about"});
+  hideFixedMenu = () => this.setState({ fixed: false, active: true });
+  showFixedMenu = () =>
+    this.setState({ fixed: true, active: false, activeButton: "about" });
   handleSidebarHide = () => this.setState({ sidebarOpened: false });
   handleToggle = () => this.setState({ sidebarOpened: true });
 
@@ -58,13 +62,13 @@ class App extends Component {
     const Scroll = require("react-scroll");
     var scroll = Scroll.animateScroll;
     const { sidebarOpened } = this.state;
-    const {active} = this.state;
+    const { active } = this.state;
     //const{activeButton} = this.state;
     if (isMobile) {
       return (
-        < >
+        <>
           <Visibility
-          style={{ overflowY: 'hidden', overflowX: 'hidden'}}
+            style={{ overflowY: "hidden", overflowX: "hidden" }}
             once={false}
             onBottomPassed={this.showFixedMenu}
             onBottomPassedReverse={this.hideFixedMenu}
@@ -117,53 +121,57 @@ class App extends Component {
               <Segment
                 inverted
                 textAlign="center"
-                style={{ minHeight: 0, padding: "0em 0em"}}
+                style={{ minHeight: 0, padding: "0em 0em" }}
                 vertical
               >
                 {/* <Container style={{ minHeight: 40, padding: "0em 0em" }} /> */}
-                <HeadMobile  setLanguage= {() => this.setState({languageIsDutch :!this.state.languageIsDutch})}/>
+                <HeadMobile
+                  setLanguage={() =>
+                    this.setState({
+                      languageIsDutch: !this.state.languageIsDutch
+                    })
+                  }
+                />
               </Segment>
 
               <About
-              language= {this.state.languageIsDutch}
-              padding='5em 0em'
+                language={this.state.languageIsDutch}
+                padding="5em 0em"
                 ref={section => {
                   this.aboutRef = section;
                 }}
               />
               <Experience
-               language= {this.state.languageIsDutch}
-              padding='5em 0em'
+                language={this.state.languageIsDutch}
+                padding="5em 0em"
                 ref={section => {
                   this.experienceRef = section;
                 }}
               />
-                            <Education
-                             language= {this.state.languageIsDutch}
-              padding='5em 0em'
+              <Education
+                language={this.state.languageIsDutch}
+                padding="5em 0em"
                 ref={section => {
                   this.educationRef = section;
                 }}
               />
               <Projects
-              isMobile= {this.isMobile}
-               language= {this.state.languageIsDutch}
-              padding='5em 0em'
+                isMobile={this.isMobile}
+                language={this.state.languageIsDutch}
+                padding="5em 0em"
                 ref={section => {
                   this.projectsRef = section;
                 }}
               />
               <Skills
-               language= {this.state.languageIsDutch}
-              padding='5em 0em'
-              columns={1}
+                language={this.state.languageIsDutch}
+                padding="5em 0em"
+                columns={1}
                 ref={section => {
                   this.skillsRef = section;
                 }}
               />
-              <Footer
-               language= {this.state.languageIsDutch}
-              padding='5em 0em'/>
+              <Footer language={this.state.languageIsDutch} padding="5em 0em" />
             </Sidebar.Pusher>
           </Visibility>
         </>
@@ -180,7 +188,7 @@ class App extends Component {
             onClick={() => scrollToComponent(this.aboutRef)}
           />
           <Visibility
-            style={{marginTop: '-50px'}}
+            style={{ marginTop: "-50px" }}
             once={false}
             onBottomPassed={this.showFixedMenu}
             onBottomPassedReverse={this.hideFixedMenu}
@@ -194,8 +202,12 @@ class App extends Component {
             >
               <Container>
                 <Menu.Item position="right">
-                  <Menu.Item as="a" active={active} onClick={() => scroll.scrollTo(0)}>
-                   Home
+                  <Menu.Item
+                    as="a"
+                    active={active}
+                    onClick={() => scroll.scrollTo(0)}
+                  >
+                    Home
                   </Menu.Item>
                   <Menu.Item
                     as="a"
@@ -207,7 +219,7 @@ class App extends Component {
                     as="a"
                     onClick={() => scrollToComponent(this.experienceRef)}
                   >
-                   {this.state.languageIsDutch ? "Ervaring" : "Experience"}
+                    {this.state.languageIsDutch ? "Ervaring" : "Experience"}
                   </Menu.Item>
                   <Menu.Item
                     as="a"
@@ -228,56 +240,60 @@ class App extends Component {
                     {this.state.languageIsDutch ? "Kennis" : "Skills"}
                   </Menu.Item>
                   <Menu.Item
-                    
-                    onClick={() => this.setState({languageIsDutch: !this.state.languageIsDutch})}
+                    style={{ paddingRight: "0", marginRight:'0' }}
+                    onClick={() => this.setState({ languageIsDutch: true })}
                   >
-                    <FaLanguage id="language" size = '1.5em'/>
+                    <Image id="country" src={NL} />
+                  </Menu.Item>
+                  <Menu.Item
+                    style={{ paddingLeft: "0", marginLeft: '0'}}
+                    onClick={() => this.setState({ languageIsDutch: false })}
+                  >
+                    <Image id="country" src={UK} />
                   </Menu.Item>
                 </Menu.Item>
               </Container>
             </Menu>
           </Visibility>
           <About
-          language= {this.state.languageIsDutch}
-          padding='20em 0em'
+            language={this.state.languageIsDutch}
+            padding="20em 0em"
             ref={section => {
               this.aboutRef = section;
             }}
           />
           <Experience
-          language= {this.state.languageIsDutch}
-           padding='20em 0em'
+            language={this.state.languageIsDutch}
+            padding="20em 0em"
             ref={section => {
               this.experienceRef = section;
             }}
           />
-            <Education
-            language= {this.state.languageIsDutch}
-           padding='20em 0em'
+          <Education
+            language={this.state.languageIsDutch}
+            padding="20em 0em"
             ref={section => {
               this.educationRef = section;
             }}
           />
           <Projects
-                        isMobile= {this.isMobile}
-          language= {this.state.languageIsDutch}
-           padding='20em 0em'
-           display="none"
+            isMobile={this.isMobile}
+            language={this.state.languageIsDutch}
+            padding="20em 0em"
+            display="none"
             ref={section => {
               this.projectsRef = section;
             }}
           />
           <Skills
-           language= {this.state.languageIsDutch}
-           padding='20em 0em'
-           columns={2}
+            language={this.state.languageIsDutch}
+            padding="20em 0em"
+            columns={2}
             ref={section => {
               this.skillsRef = section;
             }}
           />
-          <Footer
-          language= {this.state.languageIsDutch}
-          padding='5em 0em' />
+          <Footer language={this.state.languageIsDutch} padding="5em 0em" />
         </>
       );
     }
