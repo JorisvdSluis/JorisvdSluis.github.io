@@ -56,6 +56,9 @@ class App extends Component {
     window.addEventListener("resize", this.handleWindowSizeChange);
   }
 
+  componentDidMount(){
+    this.setState({mount: true})
+  }
   // make sure to remove the listener
   // when the component is not mounted anymore
   componentWillUnmount() {
@@ -68,7 +71,7 @@ class App extends Component {
 
   state = {};
 
-  handleUpdate = (e, { calculations }) => this.setState({ fixed: !calculations.onScreen});
+  handleUpdate = (e, { calculations }) => { if(this.state.mount){this.setState({ fixed: !calculations.onScreen})}else{this.setState({ fixed: false})}};
   render() {
     const { width } = this.state;
     const isMobile = width <= 500;
