@@ -34,33 +34,13 @@ class App extends Component {
       languageIsDutch: true,
       fixed: false,
       active: true,
-      mount: false,
-      calculations: {
-        direction: 'none',
-        height: 0,
-        width: 0,
-        topPassed: false,
-        bottomPassed: false,
-        pixelsPassed: 0,
-        percentagePassed: 0,
-        topVisible: false,
-        bottomVisible: false,
-        fits: false,
-        passing: false,
-        onScreen: false,
-        offScreen: false,
-      },
-    };
+    }
   }
   componentWillMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
   }
 
-  componentDidMount(){
-    this.setState({mount: true})
-  }
-  // make sure to remove the listener
-  // when the component is not mounted anymore
+
   componentWillUnmount() {
     window.removeEventListener("resize", this.handleWindowSizeChange);
   }
@@ -68,19 +48,17 @@ class App extends Component {
   handleWindowSizeChange = () => {
     this.setState({ width: window.innerWidth });
   };
-
+  hideFixedMenu = () => this.setState({ fixed: false })
+  showFixedMenu = () => this.setState({ fixed: true })
   state = {};
 
-  handleUpdate = (e, { calculations }) => { if(this.state.mount){this.setState({ fixed: !calculations.onScreen})}else{this.setState({ fixed: false})}};
   render() {
     const { width } = this.state;
     const isMobile = width <= 500;
-    // const { fixed } = this.state;
     const Scroll = require("react-scroll");
     var scroll = Scroll.animateScroll;
-    const { sidebarOpened } = this.state;
     const { active } = this.state;
-    //const{activeButton} = this.state;
+
     if (isMobile) {
       return (
         <>
@@ -141,18 +119,18 @@ class App extends Component {
       );
     } else {
       return (
-        <>{" "}
-          <Head />
+        <>
           <Visibility
-            style={{ marginTop: "-50px"}}
-            continuous ={true}
-            onUpdate={this.handleUpdate}
-          ></Visibility>
-          <Visibility
-            style={{ marginTop: "-50px" }}
+                    once={false}
+                    onBottomPassed={this.showFixedMenu}
+                   onBottomPassedReverse={this.hideFixedMenu}
+            style={{ maxHeight: "85%" }} 
           >
+                {" "}
+          <Head />
             <Menu
-              fixed="top"
+
+              fixed={this.state.fixed ? 'top' : 'top'}
               inverted={!this.state.fixed}
               secondary={!this.state.fixed}
               borderless
