@@ -13,9 +13,13 @@ class Footer extends React.Component {
                   About
                 </Header>
                 <p>
-                 {this.props.language ? "Deze website heb ik ontwikkeld met React": "I created this website with React."}
+                  {this.props.language
+                    ? "Deze website heb ik ontwikkeld met React"
+                    : "I created this website with React."}
                   <br />
-                  {this.props.language ?"Voor meer informatie neem contact op via" :"  For more info contact me via"}{" "}
+                  {this.props.language
+                    ? "Voor meer informatie neem contact op via"
+                    : "  For more info contact me via"}{" "}
                   <a
                     style={{ color: "lime" }}
                     href="https://www.linkedin.com/in/joris-van-der-sluis-a39a13152/"
@@ -25,7 +29,7 @@ class Footer extends React.Component {
                   </a>
                 </p>
                 <List link inverted>
-                  <List.Item> Copyright © 2019 All rights reserved.</List.Item>
+                  <List.Item> Copyright © 2020 All rights reserved.</List.Item>
                 </List>
               </Grid.Column>
             </Grid.Row>
