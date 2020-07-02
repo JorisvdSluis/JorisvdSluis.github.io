@@ -33,10 +33,10 @@ class About extends React.Component {
                   Mijn grootste hobby is software maken, maar daarnaast vind ik
                   het ook leuk om aan mijn Mazda Mx5 te sleutelen. In de
                   toekomst zie ik mijzelf als Fullstack developer bij een
-                  bedrijf.Op basis van dit doel heb ik ervoor gekozen om tijdens
-                  mijn studie zo breed mogelijk te ontwikkelen, dit zorgt ervoor
-                  dat ik de vele verschillende ervaringen kan gebruiken in mijn
-                  verdere loopbaan.
+                  bedrijf. Op basis van dit doel heb ik ervoor gekozen om
+                  tijdens mijn studie zo breed mogelijk te ontwikkelen, dit
+                  zorgt ervoor dat ik de vele verschillende ervaringen kan
+                  gebruiken in mijn verdere loopbaan.
                 </p>
               </Grid.Column>
               <Grid.Column floated="right" width={5}>
