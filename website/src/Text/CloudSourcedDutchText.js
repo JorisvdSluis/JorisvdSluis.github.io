@@ -24,8 +24,8 @@ class CloudSourcedDutchText extends React.Component {
           implementatie is goedgekeurd.
         </p>
         <p style={{ fontSize: "1.33em", marginBottom: "11em" }}>
-          Dit project is gemaakt met Java, Spring en React. Ik heb dit project
-          gemaakt tijdens de minor Fullstack Java.
+          Dit project is gemaakt met Java, Spring en React en is ontwikkeld
+          tijdens de minor Fullstack Java.
         </p>
       </>
     );
