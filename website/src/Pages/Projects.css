@@ -1,10 +1,20 @@
-#Big{
-  
-    box-shadow: 10px 10px 5px grey;
-   
-
+#Big {
+  box-shadow: 10px 10px 5px grey;
 }
-#Small{
-    
-   
+#close {
+  position: absolute;
+  right: 10px;
+  margin-top: 10px;
+}
+#next {
+  position: absolute;
+  right: 50px;
+  margin-top: 225px;
+}
+#back {
+  position: absolute;
+  left: 50px;
+  margin-top: 225px;
+}
+#Small {
 }

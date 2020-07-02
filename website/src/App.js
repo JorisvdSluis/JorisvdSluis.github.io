@@ -7,7 +7,7 @@ import {
   Visibility,
   Sidebar,
   Segment,
-  Image
+  Image,
 } from "semantic-ui-react";
 import Footer from "./Pages/Footer";
 import Skills from "./Pages/Skills";
@@ -34,12 +34,11 @@ class App extends Component {
       languageIsDutch: true,
       fixed: false,
       active: true,
-    }
+    };
   }
   componentWillMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
   }
-
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.handleWindowSizeChange);
@@ -48,8 +47,8 @@ class App extends Component {
   handleWindowSizeChange = () => {
     this.setState({ width: window.innerWidth });
   };
-  hideFixedMenu = () => this.setState({ fixed: false })
-  showFixedMenu = () => this.setState({ fixed: true })
+  hideFixedMenu = () => this.setState({ fixed: false });
+  showFixedMenu = () => this.setState({ fixed: true });
   state = {};
 
   render() {
@@ -62,75 +61,74 @@ class App extends Component {
     if (isMobile) {
       return (
         <>
-            <Segment
-              inverted
-              textAlign="center"
-              style={{ minHeight: 0, padding: "0em 0em" }}
-              vertical
-            >
-              <HeadMobile
-                setLanguage={() =>
-                  this.setState({
-                    languageIsDutch: !this.state.languageIsDutch
-                  })
-                }
-              />
-            </Segment>
+          <Segment
+            inverted
+            textAlign="center"
+            style={{ minHeight: 0, padding: "0em 0em" }}
+            vertical
+          >
+            <HeadMobile
+              setLanguage={() =>
+                this.setState({
+                  languageIsDutch: !this.state.languageIsDutch,
+                })
+              }
+            />
+          </Segment>
 
-            <About
-              language={this.state.languageIsDutch}
-              padding="5em 0em"
-              ref={section => {
-                this.aboutRef = section;
-              }}
-            />
-            <Experience
-              language={this.state.languageIsDutch}
-              padding="5em 0em"
-              ref={section => {
-                this.experienceRef = section;
-              }}
-            />
-            <Education
-              language={this.state.languageIsDutch}
-              padding="5em 0em"
-              ref={section => {
-                this.educationRef = section;
-              }}
-            />
-            <Projects
-              isMobile={this.isMobile}
-              language={this.state.languageIsDutch}
-              padding="5em 0em"
-              ref={section => {
-                this.projectsRef = section;
-              }}
-            />
-            <Skills
-              language={this.state.languageIsDutch}
-              padding="5em 0em"
-              columns={1}
-              ref={section => {
-                this.skillsRef = section;
-              }}
-            />
-            <Footer language={this.state.languageIsDutch} padding="5em 0em" />
+          <About
+            language={this.state.languageIsDutch}
+            padding="5em 0em"
+            ref={(section) => {
+              this.aboutRef = section;
+            }}
+          />
+          <Experience
+            language={this.state.languageIsDutch}
+            padding="5em 0em"
+            ref={(section) => {
+              this.experienceRef = section;
+            }}
+          />
+          <Education
+            language={this.state.languageIsDutch}
+            padding="5em 0em"
+            ref={(section) => {
+              this.educationRef = section;
+            }}
+          />
+          <Projects
+            isMobile={true}
+            language={this.state.languageIsDutch}
+            padding="5em 0em"
+            ref={(section) => {
+              this.projectsRef = section;
+            }}
+          />
+          <Skills
+            language={this.state.languageIsDutch}
+            padding="5em 0em"
+            columns={1}
+            ref={(section) => {
+              this.skillsRef = section;
+            }}
+          />
+          <Footer language={this.state.languageIsDutch} padding="5em 0em" />
         </>
       );
     } else {
       return (
         <>
           <Visibility
-                    once={false}
-                    onBottomPassed={this.showFixedMenu}
-                   onBottomPassedReverse={this.hideFixedMenu}
-            style={{ maxHeight: "85%" }} 
+            once={false}
+            onBottomPassed={this.showFixedMenu}
+            onBottomPassedReverse={this.hideFixedMenu}
+            style={{ maxHeight: "85%" }}
           >
-                {" "}
-          <Head />
+            {" "}
+            <Head />
             <Menu
-
-              fixed={this.state.fixed ? 'top' : 'top'}
+              fixed={this.state.fixed ? "top" : "top"}
               inverted={!this.state.fixed}
               secondary={!this.state.fixed}
               borderless
@@ -180,7 +178,7 @@ class App extends Component {
                       paddingLeft: "1em",
                       paddingRight: "0",
                       marginRight: "0",
-                      cursor: "pointer"
+                      cursor: "pointer",
                     }}
                     onClick={() => this.setState({ languageIsDutch: true })}
                   >
@@ -190,7 +188,7 @@ class App extends Component {
                     style={{
                       paddingLeft: "0",
                       marginLeft: "0",
-                      cursor: "pointer"
+                      cursor: "pointer",
                     }}
                     onClick={() => this.setState({ languageIsDutch: false })}
                   >
@@ -209,30 +207,30 @@ class App extends Component {
           <About
             language={this.state.languageIsDutch}
             padding="20em 0em"
-            ref={section => {
+            ref={(section) => {
               this.aboutRef = section;
             }}
           />
           <Experience
             language={this.state.languageIsDutch}
             padding="20em 0em"
-            ref={section => {
+            ref={(section) => {
               this.experienceRef = section;
             }}
           />
           <Education
             language={this.state.languageIsDutch}
             padding="20em 0em"
-            ref={section => {
+            ref={(section) => {
               this.educationRef = section;
             }}
           />
           <Projects
-            isMobile={this.isMobile}
+            isMobile={false}
             language={this.state.languageIsDutch}
             padding="20em 0em"
             display="none"
-            ref={section => {
+            ref={(section) => {
               this.projectsRef = section;
             }}
           />
@@ -240,7 +238,7 @@ class App extends Component {
             language={this.state.languageIsDutch}
             padding="20em 0em"
             columns={2}
-            ref={section => {
+            ref={(section) => {
               this.skillsRef = section;
             }}
           />

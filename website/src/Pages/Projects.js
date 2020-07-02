@@ -18,8 +18,18 @@ import GameImage from "../assets/Game.png";
 import FaceImage from "../assets/face.jpg";
 import cevede from "../assets/cevede.png";
 import seatplan from "../assets/seatplan.jpg";
+import excel from "../assets/excel.png";
+import cloudsourced from "../assets/cloudsourced.png";
+import ovatic from "../assets/ovatic.png";
 import { FaArrowUp } from "react-icons/fa";
+import { MdArrowBack, MdArrowForward, MdClose } from "react-icons/md";
 import "./Projects.css";
+import ExcelText from "../Text/ExcelText";
+import ExcelDutchText from "../Text/ExcelDutchText";
+import OvaticDutchText from "../Text/OvaticDutchText";
+import OvaticText from "../Text/OvaticText";
+import CloudSourcedDutchText from "../Text/CloudSourcedDutchText";
+import CloudSourcedText from "../Text/CloudsourcedText";
 class Projects extends React.Component {
   projectsEnum = {
     python: 0,
@@ -27,7 +37,10 @@ class Projects extends React.Component {
     app: 2,
     webshop: 3,
     seatplan: 4,
-    cevede: 5
+    cevede: 5,
+    excel: 6,
+    cloudsourced: 7,
+    ovatic: 8,
   };
   constructor(props) {
     super(props);
@@ -40,25 +53,340 @@ class Projects extends React.Component {
   handleClick(photoId) {
     this.setState({ selectedPhoto: photoId, userClicked: true });
   }
-
+  handleClose() {
+    this.setState({ selectedPhoto: null, userClicked: false });
+  }
   render() {
     return (
       <Segment style={{ padding: this.props.padding }} vertical>
-        <Grid container stackable verticalAlign="middle">
-          <Grid.Row>
-            <Grid.Column floated="right" width={9}>
+        {!this.props.isMobile ? (
+          !this.state.userClicked ? (
+            <Grid container stackable verticalAlign="middle">
+              <Grid.Column floated="right">
+                <Header
+                  as="h3"
+                  style={{ fontSize: "2em", display: this.props.display }}
+                >
+                  Projects
+                </Header>
+                <Grid columns={3}>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.cevede
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={cevede}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.cevede
+                      )}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.seatplan
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={seatplan}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.seatplan
+                      )}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.webshop
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={webshop}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.webshop
+                      )}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.app
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={AppImage}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.app
+                      )}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.face
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={FaceImage}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.face
+                      )}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.python
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={GameImage}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.python
+                      )}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto ===
+                        this.projectsEnum.cloudsourced
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={cloudsourced}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.cloudsourced
+                      )}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.ovatic
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={ovatic}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.ovatic
+                      )}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.excel
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={excel}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.excel
+                      )}
+                    />
+                  </Grid.Column>
+                </Grid>
+                <FaArrowUp id="Arrow2" size="2.5em" />
+                <div id={this.props.isMobile ? "ArrowMobileText" : "ArrowText"}>
+                  {this.props.language
+                    ? "Klik op een afbeelding!"
+                    : "Click an image!"}
+                </div>
+              </Grid.Column>
+            </Grid>
+          ) : (
+            <div style={{ height: "500px" }}>
+              <MdArrowBack
+                style={{ cursor: "pointer" }}
+                id="back"
+                size="2em"
+                onClick={this.handleClick.bind(
+                  this,
+                  this.state.selectedPhoto == 0
+                    ? 9
+                    : this.state.selectedPhoto - 1
+                )}
+              />
+              <MdClose
+                size="2em"
+                style={{ cursor: "pointer" }}
+                id="close"
+                onClick={this.handleClose.bind(this)}
+              />
+              <MdArrowForward
+                size="2em"
+                style={{ cursor: "pointer" }}
+                id="next"
+                onClick={this.handleClick.bind(
+                  this,
+                  this.state.selectedPhoto == 9
+                    ? 0
+                    : this.state.selectedPhoto + 1
+                )}
+              />
+              <Grid container stackable>
+                <Grid.Row>
+                  <Grid.Column width={8}>
+                    <Image
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="huge"
+                      src={
+                        this.state.selectedPhoto === this.projectsEnum.app
+                          ? AppImage
+                          : this.state.selectedPhoto ===
+                            this.projectsEnum.cloudsourced
+                          ? cloudsourced
+                          : this.state.selectedPhoto ===
+                            this.projectsEnum.cevede
+                          ? cevede
+                          : this.state.selectedPhoto === this.projectsEnum.excel
+                          ? excel
+                          : this.state.selectedPhoto ===
+                            this.projectsEnum.python
+                          ? GameImage
+                          : this.state.selectedPhoto === this.projectsEnum.face
+                          ? FaceImage
+                          : this.state.selectedPhoto ===
+                            this.projectsEnum.webshop
+                          ? webshop
+                          : this.state.selectedPhoto ===
+                            this.projectsEnum.ovatic
+                          ? ovatic
+                          : seatplan
+                      }
+                    />
+                  </Grid.Column>
+                  <Grid.Column width={8}>
+                    {this.state.selectedPhoto === this.projectsEnum.app ? (
+                      this.props.language ? (
+                        <AppDutchText />
+                      ) : (
+                        <AppText />
+                      )
+                    ) : this.state.selectedPhoto ===
+                      this.projectsEnum.cloudsourced ? (
+                      this.props.language ? (
+                        <CloudSourcedDutchText />
+                      ) : (
+                        <CloudSourcedText />
+                      )
+                    ) : this.state.selectedPhoto ===
+                      this.projectsEnum.cevede ? (
+                      this.props.language ? (
+                        <CevedeDutchText />
+                      ) : (
+                        <CevedeText />
+                      )
+                    ) : this.state.selectedPhoto === this.projectsEnum.excel ? (
+                      this.props.language ? (
+                        <ExcelDutchText />
+                      ) : (
+                        <ExcelText />
+                      )
+                    ) : this.state.selectedPhoto ===
+                      this.projectsEnum.python ? (
+                      this.props.language ? (
+                        <GameDutchText />
+                      ) : (
+                        <GameText />
+                      )
+                    ) : this.state.selectedPhoto === this.projectsEnum.face ? (
+                      this.props.language ? (
+                        <FaceDutchText />
+                      ) : (
+                        <FaceText />
+                      )
+                    ) : this.state.selectedPhoto ===
+                      this.projectsEnum.webshop ? (
+                      this.props.language ? (
+                        <WebshopDutchText />
+                      ) : (
+                        <WebshopText />
+                      )
+                    ) : this.state.selectedPhoto ===
+                      this.projectsEnum.ovatic ? (
+                      this.props.language ? (
+                        <OvaticDutchText />
+                      ) : (
+                        <OvaticText />
+                      )
+                    ) : this.props.language ? (
+                      <SeatplanDutchText />
+                    ) : (
+                      <SeatplanText />
+                    )}
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </div>
+          )
+        ) : (
+          <Grid container stackable verticalAlign="middle">
+            <Grid.Column floated="right">
               <Header
                 as="h3"
                 style={{ fontSize: "2em", display: this.props.display }}
               >
                 Projects
               </Header>
-              <Grid columns={2}>
+              <Grid columns={3}>
                 <Grid.Column>
                   <Image
                     id={
                       this.state.selectedPhoto === this.projectsEnum.cevede
-                        ? "Big"
+                        ? this.props.isMobile
+                          ? ""
+                          : "Big"
                         : "Small"
                     }
                     style={{ cursor: "pointer" }}
@@ -66,10 +394,6 @@ class Projects extends React.Component {
                     rounded
                     size="large"
                     src={cevede}
-                    onClick={this.handleClick.bind(
-                      this,
-                      this.projectsEnum.cevede
-                    )}
                   />
                 </Grid.Column>
                 <Grid.Column>
@@ -84,10 +408,6 @@ class Projects extends React.Component {
                     rounded
                     size="large"
                     src={seatplan}
-                    onClick={this.handleClick.bind(
-                      this,
-                      this.projectsEnum.seatplan
-                    )}
                   />
                 </Grid.Column>
                 <Grid.Column>
@@ -102,10 +422,6 @@ class Projects extends React.Component {
                     rounded
                     size="large"
                     src={webshop}
-                    onClick={this.handleClick.bind(
-                      this,
-                      this.projectsEnum.webshop
-                    )}
                   />
                 </Grid.Column>
                 <Grid.Column>
@@ -120,7 +436,6 @@ class Projects extends React.Component {
                     rounded
                     size="large"
                     src={AppImage}
-                    onClick={this.handleClick.bind(this, this.projectsEnum.app)}
                   />
                 </Grid.Column>
                 <Grid.Column>
@@ -135,10 +450,6 @@ class Projects extends React.Component {
                     rounded
                     size="large"
                     src={FaceImage}
-                    onClick={this.handleClick.bind(
-                      this,
-                      this.projectsEnum.face
-                    )}
                   />
                 </Grid.Column>
                 <Grid.Column>
@@ -153,62 +464,55 @@ class Projects extends React.Component {
                     rounded
                     size="large"
                     src={GameImage}
-                    onClick={this.handleClick.bind(
-                      this,
-                      this.projectsEnum.python
-                    )}
                   />
-   
                 </Grid.Column>
-                
+                <Grid.Column>
+                  <Image
+                    id={
+                      this.state.selectedPhoto ===
+                      this.projectsEnum.cloudsourced
+                        ? "Big"
+                        : "Small"
+                    }
+                    style={{ cursor: "pointer" }}
+                    bordered
+                    rounded
+                    size="large"
+                    src={cloudsourced}
+                  />
+                </Grid.Column>
+                <Grid.Column>
+                  <Image
+                    id={
+                      this.state.selectedPhoto === this.projectsEnum.ovatic
+                        ? "Big"
+                        : "Small"
+                    }
+                    style={{ cursor: "pointer" }}
+                    bordered
+                    rounded
+                    size="large"
+                    src={ovatic}
+                  />
+                </Grid.Column>
+                <Grid.Column>
+                  <Image
+                    id={
+                      this.state.selectedPhoto === this.projectsEnum.excel
+                        ? "Big"
+                        : "Small"
+                    }
+                    style={{ cursor: "pointer" }}
+                    bordered
+                    rounded
+                    size="large"
+                    src={excel}
+                  />
+                </Grid.Column>
               </Grid>
-              <FaArrowUp
-             id="Arrow2"
-            size="2.5em"
-           
-          /><div id={this.props.isMobile ? "ArrowMobileText":"ArrowText"}>{this.props.language ? "Klik op een afbeelding!" : "Click an image!"}</div>
             </Grid.Column>
-            <Grid.Column width={1}>     </Grid.Column>
-            <Grid.Column width={6}>
-              {this.state.selectedPhoto === this.projectsEnum.app && this.props.language && (
-                <AppDutchText />
-              )}
-                {this.state.selectedPhoto === this.projectsEnum.app && !this.props.language && (
-                <AppText />
-              )}
-              {this.state.selectedPhoto === this.projectsEnum.face && this.props.language && (
-                <FaceDutchText />
-              )}
-              {this.state.selectedPhoto === this.projectsEnum.face && !this.props.language && (
-                <FaceText />
-              )}
-              {this.state.selectedPhoto === this.projectsEnum.python && this.props.language && (
-                <GameDutchText />
-              )}
-               {this.state.selectedPhoto === this.projectsEnum.python && !this.props.language && (
-                <GameText />
-              )}
-              {this.state.selectedPhoto === this.projectsEnum.webshop && this.props.language  && (
-                <WebshopDutchText  />
-              )}
-               {this.state.selectedPhoto === this.projectsEnum.webshop && !this.props.language  && (
-                <WebshopText  />
-              )}
-               {this.state.selectedPhoto === this.projectsEnum.cevede && this.props.language  && (
-                <CevedeDutchText />
-              )}
-                {this.state.selectedPhoto === this.projectsEnum.cevede && !this.props.language  && (
-                <CevedeText />
-              )}
-               {this.state.selectedPhoto === this.projectsEnum.seatplan && this.props.language && (
-                <SeatplanDutchText />
-              )}
-               {this.state.selectedPhoto === this.projectsEnum.seatplan && !this.props.language && (
-                <SeatplanText />
-              )}
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+          </Grid>
+        )}
       </Segment>
     );
   }
