@@ -18,8 +18,7 @@ class ExcelDutchText extends React.Component {
         </p>
         <p style={{ fontSize: "1.33em" }}>
           Omdat het mij dagen zou kosten om alle bestanden te converteren naar
-          csv ,voor gebruik in de webshop, heb ik een python script geschreven
-          die dit voor mij doet.
+          csv heb ik een python script geschreven die dit voor mij doet.
         </p>
         <p style={{ fontSize: "1.33em", marginBottom: "11em" }}>
           Nadat dit script af was moest ik nog steeds aanpassingen doen zoals:
