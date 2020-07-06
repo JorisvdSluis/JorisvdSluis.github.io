@@ -9,9 +9,9 @@ class CloudSourcedDutchText extends React.Component {
           Cloudsourced
         </Header>
         <p style={{ fontSize: "1.33em" }}>
-          Cloudsourced is een applicatie om software componenten te bestellen en
-          maken.deze componenten worden gemaakt door andere gebruikers van
-          Cloudsourced.
+          Cloudsourced is een applicatie om software componenten te bestellen.
+          Deze componenten worden gemaakt door andere gebruikers van
+          Cloudsourced, waarna zij valuta verdienen.
         </p>
         <p style={{ fontSize: "1.33em" }}>
           Cloudsourced werkt net als andere platformen, maak een account en je
@@ -21,7 +21,8 @@ class CloudSourcedDutchText extends React.Component {
         </p>
         <p style={{ fontSize: "1.33em" }}>
           De developers worden betaald in punten die uitbetaald worden nadat een
-          implementatie is goedgekeurd.
+          implementatie is goedgekeurd. Deze punten zijn in de toekomst om te
+          zetten in echte valuta.
         </p>
         <p style={{ fontSize: "1.33em", marginBottom: "11em" }}>
           Dit project is gemaakt met Java, Spring en React en is ontwikkeld
