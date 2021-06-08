@@ -18,6 +18,8 @@ import GameImage from "../assets/Game.png";
 import FaceImage from "../assets/face.jpg";
 import cevede from "../assets/cevede.png";
 import seatplan from "../assets/seatplan.jpg";
+import car from "../assets/car.jpg";
+import Afstudeerstage from "../assets/afstudeer.png";
 import excel from "../assets/excel.png";
 import cloudsourced from "../assets/cloudsourced.png";
 import ovatic from "../assets/ovatic.png";
@@ -30,22 +32,28 @@ import OvaticDutchText from "../Text/OvaticDutchText";
 import OvaticText from "../Text/OvaticText";
 import CloudSourcedDutchText from "../Text/CloudSourcedDutchText";
 import CloudSourcedText from "../Text/CloudsourcedText";
+import CarText from "../Text/CarText";
+import CarDutchText from "../Text/CarDutchText";
+import AEFDutchText from "../Text/AEFDutchText";
+import AEFText from "../Text/AEFText";
 class Projects extends React.Component {
   projectsEnum = {
-    python: 0,
-    face: 1,
-    app: 2,
-    webshop: 3,
-    seatplan: 4,
-    cevede: 5,
-    excel: 6,
-    cloudsourced: 7,
-    ovatic: 8,
+    AEF: 0,
+    car: 1,
+    cevede: 2,
+    seatplan: 3,
+    webshop: 4,
+    app: 5,
+    face: 6,
+    python: 7,
+    cloudsourced: 8,
+    ovatic: 9,
+    excel: 10,
   };
   constructor(props) {
     super(props);
     this.state = {
-      selectedPhoto: this.projectsEnum.cevede,
+      selectedPhoto: this.projectsEnum.AEF,
       userClicked: false,
     };
   }
@@ -69,7 +77,43 @@ class Projects extends React.Component {
                 >
                   Projects
                 </Header>
-                <Grid columns={3}>
+                <Grid columns={4}>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.AEF
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={Afstudeerstage}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.AEF
+                      )}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.car
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={car}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.car
+                      )}
+                    />
+                  </Grid.Column>
                   <Grid.Column>
                     <Image
                       id={
@@ -251,7 +295,7 @@ class Projects extends React.Component {
                 onClick={this.handleClick.bind(
                   this,
                   this.state.selectedPhoto == 0
-                    ? 9
+                    ? 10
                     : this.state.selectedPhoto - 1
                 )}
               />
@@ -267,7 +311,7 @@ class Projects extends React.Component {
                 id="next"
                 onClick={this.handleClick.bind(
                   this,
-                  this.state.selectedPhoto == 9
+                  this.state.selectedPhoto == 10
                     ? 0
                     : this.state.selectedPhoto + 1
                 )}
@@ -302,6 +346,12 @@ class Projects extends React.Component {
                           : this.state.selectedPhoto ===
                             this.projectsEnum.ovatic
                           ? ovatic
+                          : this.state.selectedPhoto ===
+                            this.projectsEnum.car
+                          ? car
+                          : this.state.selectedPhoto ===
+                            this.projectsEnum.AEF
+                          ? Afstudeerstage
                           : seatplan
                       }
                     />
@@ -360,7 +410,22 @@ class Projects extends React.Component {
                       ) : (
                         <OvaticText />
                       )
-                    ) : this.props.language ? (
+                    ) : this.state.selectedPhoto ===
+                    this.projectsEnum.car ? (
+                    this.props.language ? (
+                      <CarDutchText />
+                    ) : (
+                      <CarText />
+                    )
+                  ) : this.state.selectedPhoto ===
+                  this.projectsEnum.AEF ? (
+                  this.props.language ? (
+                    <AEFDutchText />
+                  ) : (
+                    <AEFText />
+                  )
+                )
+                  : this.props.language ? (
                       <SeatplanDutchText />
                     ) : (
                       <SeatplanText />
@@ -379,7 +444,39 @@ class Projects extends React.Component {
               >
                 Projects
               </Header>
-              <Grid columns={3}>
+              <Grid columns={4}>
+              <Grid.Column>
+                  <Image
+                    id={
+                      this.state.selectedPhoto === this.projectsEnum.AEF
+                        ? this.props.isMobile
+                          ? ""
+                          : "Big"
+                        : "Small"
+                    }
+                    style={{ cursor: "pointer" }}
+                    bordered
+                    rounded
+                    size="large"
+                    src={Afstudeerstage}
+                  />
+                </Grid.Column>
+                <Grid.Column>
+                  <Image
+                    id={
+                      this.state.selectedPhoto === this.projectsEnum.car
+                        ? this.props.isMobile
+                          ? ""
+                          : "Big"
+                        : "Small"
+                    }
+                    style={{ cursor: "pointer" }}
+                    bordered
+                    rounded
+                    size="large"
+                    src={car}
+                  />
+                </Grid.Column>
                 <Grid.Column>
                   <Image
                     id={

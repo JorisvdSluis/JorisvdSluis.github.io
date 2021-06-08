@@ -23,6 +23,13 @@ class Education extends React.Component {
                   Hogeschool Rotterdam
                   <br />
                   <br />
+                  <Label ribbon>2021 - Heden</Label>
+                  <br />
+                  <b>Afstudeerstage Informatica</b> <br />
+                  Soltegro<br></br>
+                  <a href="http://www.soltegro.nl/">Website</a>
+                  <br />
+                  <br />
                   <Label ribbon>2019 - 2020</Label>
                   <br />
                   <b>Stagiar Informatica</b> <br />
@@ -57,6 +64,13 @@ class Education extends React.Component {
                   <br />
                   <b>Computer science</b> <br />
                   University of applied sciences Rotterdam
+                  <br />
+                  <br />
+                  <Label ribbon>2021 - now</Label>
+                  <br />
+                  <b>Computer science internship</b> <br />
+                  Soltegro<br></br>
+                  <a href="http://www.soltegro.nl/">Website</a>
                   <br />
                   <br />
                   <Label ribbon>2019 - 2020</Label>
