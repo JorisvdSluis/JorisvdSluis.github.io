@@ -32,7 +32,7 @@ class About extends React.Component {
                 <p style={{ fontSize: "1.33em" }}>
                   Mijn grootste hobby is software maken, maar daarnaast vind ik
                   het ook leuk om met mijn auto op pad te gaan. In de
-                  toekomst zie ik mijzelf als Developer bij een
+                  toekomst zie ik mijzelf als developer bij een
                   bedrijf waar ik constant kan innoveren en nieuwe dingen kan leren. 
                   Op basis van dit doel heb ik ervoor gekozen om
                   tijdens mijn studie zo breed mogelijk te ontwikkelen, dit
