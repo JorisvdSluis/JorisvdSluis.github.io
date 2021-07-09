@@ -36,6 +36,9 @@ import CarText from "../Text/CarText";
 import CarDutchText from "../Text/CarDutchText";
 import AEFDutchText from "../Text/AEFDutchText";
 import AEFText from "../Text/AEFText";
+import mosel from "../assets/mosel.png";
+import MoselDutchText from "../Text/MoselDutchText";
+import MoselText from "../Text/MoselText";
 class Projects extends React.Component {
   projectsEnum = {
     AEF: 0,
@@ -49,6 +52,7 @@ class Projects extends React.Component {
     cloudsourced: 8,
     ovatic: 9,
     excel: 10,
+    mosel:11,
   };
   constructor(props) {
     super(props);
@@ -78,6 +82,24 @@ class Projects extends React.Component {
                   Projects
                 </Header>
                 <Grid columns={4}>
+                <Grid.Column>
+                    <Image
+                      id={
+                        this.state.selectedPhoto === this.projectsEnum.mosel
+                          ? "Big"
+                          : "Small"
+                      }
+                      style={{ cursor: "pointer" }}
+                      bordered
+                      rounded
+                      size="large"
+                      src={mosel}
+                      onClick={this.handleClick.bind(
+                        this,
+                        this.projectsEnum.mosel
+                      )}
+                    />
+                  </Grid.Column>
                   <Grid.Column>
                     <Image
                       id={
@@ -295,7 +317,7 @@ class Projects extends React.Component {
                 onClick={this.handleClick.bind(
                   this,
                   this.state.selectedPhoto == 0
-                    ? 10
+                    ? 11
                     : this.state.selectedPhoto - 1
                 )}
               />
@@ -311,7 +333,7 @@ class Projects extends React.Component {
                 id="next"
                 onClick={this.handleClick.bind(
                   this,
-                  this.state.selectedPhoto == 10
+                  this.state.selectedPhoto == 11
                     ? 0
                     : this.state.selectedPhoto + 1
                 )}
@@ -352,6 +374,9 @@ class Projects extends React.Component {
                           : this.state.selectedPhoto ===
                             this.projectsEnum.AEF
                           ? Afstudeerstage
+                          : this.state.selectedPhoto ===
+                            this.projectsEnum.mosel
+                          ? mosel
                           : seatplan
                       }
                     />
@@ -424,12 +449,21 @@ class Projects extends React.Component {
                   ) : (
                     <AEFText />
                   )
+                ): this.state.selectedPhoto ===
+                this.projectsEnum.mosel ? (
+                this.props.language ? (
+                  <MoselDutchText />
+                ) : (
+                  <MoselText />
                 )
+              )
                   : this.props.language ? (
                       <SeatplanDutchText />
                     ) : (
                       <SeatplanText />
-                    )}
+                    )
+                    
+                    }
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
@@ -444,7 +478,23 @@ class Projects extends React.Component {
               >
                 Projects
               </Header>
-              <Grid columns={4}>
+              <Grid columns={1}>
+              <Grid.Column>
+                  <Image
+                    id={
+                      this.state.selectedPhoto === this.projectsEnum.mosel
+                        ? this.props.isMobile
+                          ? ""
+                          : "Big"
+                        : "Small"
+                    }
+                    style={{ cursor: "pointer" }}
+                    bordered
+                    rounded
+                    size="large"
+                    src={mosel}
+                  />
+                </Grid.Column>
               <Grid.Column>
                   <Image
                     id={
