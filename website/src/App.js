@@ -53,7 +53,7 @@ class App extends Component {
 
   render() {
     const { width } = this.state;
-    const isMobile = width <= 500;
+    const isMobile = width <= 960;
     const Scroll = require("react-scroll");
     var scroll = Scroll.animateScroll;
     const { active } = this.state;

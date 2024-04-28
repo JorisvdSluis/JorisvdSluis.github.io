@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../assets/banner4kmobile.png";
+import banner from "../assets/banner-mobile.png";
 import "./Head.css";
 import { FaLanguage } from "react-icons/fa";
 import { Image } from "semantic-ui-react";

@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../assets/banner4k.png'
+import banner from '../assets/banner2-4k.png'
 import './Head.css'
 import { FaLinkedinIn, FaGithub} from 'react-icons/fa';
 import {

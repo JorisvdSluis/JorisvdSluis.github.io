@@ -7,7 +7,7 @@ class MoselText extends React.Component {
         return (
             <>
                 <Header as='h3' style={{ fontSize: '2em' }}>
-                   VillaMosel.com
+                   Villa-Mosel.com
           </Header>
                 <p style={{ fontSize: '1.33em' }}>
                     This interactive website for Villa Mosel is designed and developed by me.
