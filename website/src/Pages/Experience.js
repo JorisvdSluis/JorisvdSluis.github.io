@@ -21,7 +21,7 @@ class Experience extends React.Component {
                 <Label ribbon>2020 - Heden</Label>
                 <br />
                 <b>Fullstack developer</b> <br />
-                LVPReserveringen
+                LVPReserveringsystemen
                 <br />
                 <a href="http://www.ovatic.nl/">Website</a>
                 <br />
@@ -58,7 +58,7 @@ class Experience extends React.Component {
                 <Label ribbon>2020 - Now</Label>
                 <br />
                 <b>Fullstack developer</b> <br />
-                LVPReserveringen
+                LVPReserveringsystemen
                 <br />
                 <a href="http://www.ovatic.nl/">Website</a>
                 <br />
