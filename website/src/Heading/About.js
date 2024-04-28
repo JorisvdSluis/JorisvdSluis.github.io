@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Grid, Header, Image, Segment } from "semantic-ui-react";
 import pdf from "../assets/cvs.pdf";
-import rug from "../assets/rug.jpg";
+import desert from "../assets/desert.jpg";
 class About extends React.Component {
   render() {
     if (this.props.language) {
@@ -23,25 +23,18 @@ class About extends React.Component {
                   C#, Python, java en Typescript.
                 </p>
                 <p style={{ fontSize: "1.33em" }}>
-                  Ik werk momenteel bij LVP en CeVeDe, als fullstack en webshop
-                  developer. Daarnaast heb ik enkele jaren bij Dirk van den
+                  Ik werk momenteel bij LVP als fullstack developer. 
+                  Daarnaast heb ik enkele jaren bij Dirk van den
                   Broek gewerkt als teamleider. Bij dit baantje heb ik meerdere
                   skills geleerd zoals het commercieel neerzetten van een
                   winkel, werken in teamverband en aansturen van werknemers.
                 </p>
                 <p style={{ fontSize: "1.33em" }}>
-                  Mijn grootste hobby is software maken, maar daarnaast vind ik
-                  het ook leuk om met mijn auto op pad te gaan. In de
-                  toekomst zie ik mijzelf als developer bij een
-                  bedrijf waar ik constant kan innoveren en nieuwe dingen kan leren. 
-                  Op basis van dit doel heb ik ervoor gekozen om
-                  tijdens mijn studie zo breed mogelijk te ontwikkelen, dit
-                  zorgt ervoor dat ik de vele verschillende ervaringen kan
-                  gebruiken in mijn verdere loopbaan.
+                  Naast mijn passie voor software ontwikkeling reis ik graag om meer van de wereld te zien en mij verder te ontwikkelen. 
                 </p>
               </Grid.Column>
-              <Grid.Column floated="right" width={5}>
-                <Image bordered rounded size="large" src={rug} />
+              <Grid.Column floated="right" width={6}>
+                <Image bordered rounded size="huge" src={desert} />
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
@@ -73,7 +66,7 @@ class About extends React.Component {
                 </p>
                 <p style={{ fontSize: "1.33em" }}>
                 
-                  I currently work at LVP and CeVeDe as fullstack developer.
+                  I currently work at LVP as fullstack developer.
                   I have also worked as as a Team Leader at Dirk van den Broek. At
                   this job I carried a lot of responsibility, because I had to
                   make sure that the store is commercially at its best. During
@@ -81,13 +74,11 @@ class About extends React.Component {
                   social skills. 
                                   </p>
                 <p style={{ fontSize: "1.33em" }}>
-                  My biggest hobby is of course software development, but
-                  besides that I also like to drive my car in the
-                  weekends.{" "}
+                  Traveling is one of my other hobbies besides software development.{" "}
                 </p>
               </Grid.Column>
-              <Grid.Column floated="right" width={5}>
-                <Image bordered rounded size="large" src={rug} />
+              <Grid.Column floated="right" width={6}>
+                <Image bordered rounded size="huge" src={desert} />
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>

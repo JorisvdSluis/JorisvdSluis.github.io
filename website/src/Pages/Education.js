@@ -9,21 +9,19 @@ class Education extends React.Component {
         <Segment style={{ padding: this.props.padding }} vertical>
           <Grid container stackable verticalAlign="middle">
             <Grid.Row>
-              <Grid.Column floated="left" width={8}>
-                <Image bordered rounded size="huge" src={education} />
-              </Grid.Column>
-              <Grid.Column floated="right" width={5}>
+            
+              <Grid.Column floated="left" width={5}>
                 <Segment basic>
                   <Header as="h3" style={{ fontSize: "2em" }}>
                    Scholing
                   </Header>
-                  <Label ribbon>2017 - Heden</Label>
+                  <Label ribbon>2017 - 2021</Label>
                   <br />
                   <b>Informatica</b> <br />
                   Hogeschool Rotterdam
                   <br />
                   <br />
-                  <Label ribbon>2021 - Heden</Label>
+                  <Label ribbon>02-2021 - 06-2021</Label>
                   <br />
                   <b>Afstudeerstage Informatica</b> <br />
                   Soltegro<br></br>
@@ -43,6 +41,9 @@ class Education extends React.Component {
                   DevelsteinCollege
                 </Segment>
               </Grid.Column>
+              <Grid.Column floated="right" width={8}>
+                <Image bordered rounded size="huge" src={education} />
+              </Grid.Column>
             </Grid.Row>
           </Grid>
         </Segment>
@@ -52,21 +53,19 @@ class Education extends React.Component {
         <Segment style={{ padding: this.props.padding }} vertical>
           <Grid container stackable verticalAlign="middle">
             <Grid.Row>
-              <Grid.Column floated="left" width={8}>
-                <Image bordered rounded size="huge" src={education} />
-              </Grid.Column>
-              <Grid.Column floated="right" width={5}>
+             
+              <Grid.Column floated="left" width={5}>
                 <Segment basic>
                   <Header as="h3" style={{ fontSize: "2em" }}>
                     Education
                   </Header>
-                  <Label ribbon>2017 - now</Label>
+                  <Label ribbon>2017 - 2021</Label>
                   <br />
                   <b>Computer science</b> <br />
                   University of applied sciences Rotterdam
                   <br />
                   <br />
-                  <Label ribbon>2021 - now</Label>
+                  <Label ribbon>02-2021 - 06-2021</Label>
                   <br />
                   <b>Computer science internship</b> <br />
                   Soltegro<br></br>
@@ -85,6 +84,9 @@ class Education extends React.Component {
                   <b>Atheneum</b> <br />
                   DevelsteinCollege
                 </Segment>
+              </Grid.Column>
+              <Grid.Column floated="right" width={8}>
+                <Image bordered rounded size="huge" src={education} />
               </Grid.Column>
             </Grid.Row>
           </Grid>
