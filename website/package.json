@@ -17,7 +17,7 @@
     "react-scroll-to": "^2.0.5",
     "react-scroll-to-component": "^1.0.2",
     "react-simple-image-slider": "^1.0.2",
-    "semantic-ui": "^2.4.2",
+    "semantic-ui": "^2.5.0",
     "semantic-ui-react": "^0.86.0"
   },
   "scripts": {
